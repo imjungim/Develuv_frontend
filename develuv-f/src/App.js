@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div>
       <h1 id='first'>
-    안녕하세요최성현입니다
+    test
       </h1>
     </div>
   )
