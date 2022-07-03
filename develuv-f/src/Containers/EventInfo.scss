@@ -10,10 +10,13 @@
      height: 100%;
      margin: auto;
      padding: 0px 24px;
+     padding-top :50px;
 }
 
 // EventInfoTitle 구역
-.EventInfoTitle {}
+.EventInfoTitle {
+     width: 1060px;
+}
 
 
 // 이벤트 제목,태그 구역
@@ -21,11 +24,12 @@
      display: inline-block;
      text-align: left;
      border-top: 4px solid rgb(74, 74, 74);
-     width: 308px;
+     width: 330px;
      min-height: 405px;
      padding-top: 14px;
      flex-shrink: 0;
      vertical-align: top; // 위쪽으로 맞추기
+     padding-bottom:20px;
 }
 
 // 이벤트 제목
@@ -102,6 +106,10 @@ a {
      text-decoration: none; // 밑줄 제거
      flex-shrink: 0;
      width: 250px;
+     margin-top : 10px;
+     margin-bottom: 10px;
+     width: 280px;
+
 }
 
 .icons {
@@ -130,4 +138,33 @@ a {
           width:100%;
           padding-top:0px;
      }
+}
+// EventInfoTitle 부분
+
+.main{
+     display: flex;
+     margin-top : 46px;
+}
+.post{
+     flex-shrink: 0;
+	width: 740px;
+}
+.ticket{
+     flex-grow: 1;
+}
+.ticket div{
+     font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 23.5px;
+}
+.ticketPost{
+     border-top:2px dashed rgb(200, 200, 200);
+     border-bottom: 2px dashed rgb(200, 200, 200);
+     display: flex;
+    flex-wrap: wrap;
+    border-top: 2px dashed rgb(200, 200, 200);
+    padding: 26px 12px;
+    cursor: default;
+    transition: background-color 0.25s ease 0s;
+    opacity: 0.4
 }

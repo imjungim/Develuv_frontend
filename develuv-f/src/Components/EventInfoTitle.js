@@ -30,7 +30,8 @@ export default function EventInfoTitle({ post }) {
                 </div>
             </div>
             <div className="buyTicket">
-                <div className="icons"><IoIosPeople size="20px" />
+                <div className="icons">
+                    <span><IoIosPeople size="20px" /></span>
                     <span>{post.현재참가인원}명</span>
                 </div>
                 <a href="/">등록</a>
