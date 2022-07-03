@@ -4,8 +4,16 @@ $MainColor1: #06283D;
 $MainColor2: #1363DF;
 $MainColor3: #47B5FF;
 $MainColor4: #DFF6FF;
+$White: #ffffff;
 
-// Scss Test Code
-#first {
-  color: $MainColor1;
+// index.html Setting
+body {
+  margin: 0%;
 }
+
+h1 {
+  margin: 0%
+}
+
+// Font Setting
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap'); // Gothic A1

@@ -1,12 +1,11 @@
 import React from 'react';
-import './App.scss'
+import './App.scss';
+import Mainpage from './Page/Mainpage';
 
 const App = () => {
   return (
     <div>
-      <h1 id='first'>
-    test
-      </h1>
+      <Mainpage/>
     </div>
   )
 }
