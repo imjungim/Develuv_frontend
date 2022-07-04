@@ -26,7 +26,6 @@ const App = () => {
           <Route path="/my/profile" element={<Myprofile/>} />
         </Routes>*/}
         <Mainpage/>
-        <Footer />
       </div>
    // </BrowserRouter>
   );
