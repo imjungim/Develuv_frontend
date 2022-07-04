@@ -6,6 +6,7 @@ import Faq from "./Components/Faq";
 import EventSearch from "./Components/EventSearch";
 import EventItem from "./Components/EventItem";
 import Footer from "./Components/Footer";
+import Mainpage from "./Page/Mainpage";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/my/events" element={<Myevent/>} />
           <Route path="/my/profile" element={<Myprofile/>} />
         </Routes>*/}
+        <Mainpage/>
         <Footer />
       </div>
    // </BrowserRouter>
