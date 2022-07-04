@@ -1,3 +1,4 @@
+import "../Components/scss/EventItem.scss";
 const EventItem = () => {
   return (
     <div id="event-board">

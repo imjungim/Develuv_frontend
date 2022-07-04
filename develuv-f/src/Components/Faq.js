@@ -1,26 +1,11 @@
 import "../Components/scss/Faq.scss";
-import Header from "./Header";
+import Navi from "./Navi";
 
 const Faq = () => {
   return(
   
     <div className="faq">
-      <section className="navimenu">
-        <ul className="navi-tabs">
-          <li>
-            <a href='/'>FAQ</a>
-          </li>
-          <li>
-            <a href='/'>이용가이드</a>
-          </li>
-          <li>
-            <a href='/'>이용약관</a>
-          </li>
-          <li>
-            <a href='/'>개인정보처리방침</a>
-          </li>
-        </ul>
-      </section>
+      <Navi/>
       <section>
       <div>
         <h3>참가자입니다</h3>
@@ -54,6 +39,6 @@ const Faq = () => {
 
     </div>
   )
-}
+};
 
 export default Faq;

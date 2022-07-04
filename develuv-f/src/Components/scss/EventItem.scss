@@ -1,6 +1,12 @@
 @import '../../App.scss';
 //EventItem
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 .event-board {
   width: 100vw;
   display: flex;
@@ -35,8 +41,10 @@
   
 }
 .new-event{
+
   width: 1200px;
   margin: 60px auto 50px auto
+
 }
 
 .new-event div{

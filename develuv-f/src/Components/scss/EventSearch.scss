@@ -1,6 +1,13 @@
 @import '../../App.scss';
 
 //EventSearch
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 .banner{
   width: 100vw;
   height : 800px;

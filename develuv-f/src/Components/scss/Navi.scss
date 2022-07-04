@@ -1,0 +1,33 @@
+@import '../../App.scss';
+
+.navimenu{
+  width: 1200px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  border-top: solid 0.5px #b6bec8;
+  border-bottom: solid 0.5px #b6bec8;
+  margin-bottom : 50px;
+}
+
+.navi-tabs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 1200px;
+  height: 90px;
+  list-style: none;
+}
+
+.navi-tabs li a{
+  display: flex;
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.navi-tabs li a:hover {
+  opacity: 0.5;
+}

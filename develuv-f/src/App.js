@@ -6,12 +6,17 @@ import Faq from "./Components/Faq";
 import EventSearch from "./Components/EventSearch";
 import EventItem from "./Components/EventItem";
 import Footer from "./Components/Footer";
+import LoginForm from "./Components/LoginForm";
 
 const App = () => {
   return (
     // <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header/>
+        <Faq/>
+        
+
+
         {/*<Routes>
           url경로와 컴포넌트를 맵핑합니다.
           <Route path="/" element={<Mainpage />} />
