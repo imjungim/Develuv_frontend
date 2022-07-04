@@ -10,11 +10,7 @@
 리덕스 redux@4.1.2 
 리액트 리덕스 react-redux
 리액트 아이콘 react-icons
-add package.json
-    package-lock.json
-    Containers
-    Components/EventInfoTitle.js
-    Components/test.png
+
     
 # 📌Develuv📌
 ![image](https://user-images.githubusercontent.com/51446128/176335021-19bee144-5aa7-49be-9152-5a6b6307c301.png)

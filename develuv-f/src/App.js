@@ -29,10 +29,12 @@ const App = () => {
           <Route path="/my/events" element={<Myevent/>} />
           <Route path="/my/profile" element={<Myprofile/>} />
         </Routes>*/}
+        <Mainpage/>
         <Footer />
       </div>
    // </BrowserRouter>
   );
 };
+
 
 export default App;

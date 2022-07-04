@@ -1,0 +1,106 @@
+
+// EventInfoTitle 구역
+.EventInfoTitle {
+    width: 1010px;
+}
+
+
+// 이벤트 제목,태그 구역
+.title {
+    display: inline-block;
+    text-align: left;
+    border-top: 4px solid rgb(74, 74, 74);
+    width: 310px;
+    min-height: 405px;
+    padding-top: 14px;
+    flex-shrink: 0;
+    vertical-align: top; // 위쪽으로 맞추기
+    padding-bottom:20px;
+}
+
+// 이벤트 제목
+.title h1 {
+    font-size: 30px;
+    line-height: 1.36;
+    margin-top: 40.5px;
+}
+
+// 태그
+.title h2 {
+    margin-top: 11.5px;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    color: rgb(164, 164, 164);
+    margin-bottom: 38px;
+}
+
+//일시,주최 글자 css
+.li {
+    font-size: 15px;
+    color: rgb(74, 74, 74);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.timeData {
+    font-size: 15px;
+    color: rgb(74, 74, 74);
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.img {
+    height: 380px;
+    width: 700px;
+    padding-right: 30px;
+}
+
+.buyTicket {
+    border-top: 1px solid rgb(164, 164, 164);
+    border-bottom: 1px solid rgb(164, 164, 164);
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.buyTicket span {
+    display: inline-block;
+    margin-left: 7px;
+    font-size: 15px;
+
+}
+
+a:hover {
+    background-color: #47B5FF;
+}
+
+.reg {
+    text-align: right;
+    height: auto;
+    background-color: #1363DF;
+    color: white;
+    padding: 16px 20px;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    line-height: 1.15;
+    display: inline-block;
+    text-decoration: none; // 밑줄 제거
+    flex-shrink: 0;
+    width: 310px;
+    margin-top : 10px;
+    margin-bottom: 10px;
+    
+
+}
+
+.icons {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: 23px;
+    flex-grow: 1;
+}
