@@ -6,47 +6,21 @@ import Faq from "./Components/Faq";
 import EventSearch from "./Components/EventSearch";
 import EventItem from "./Components/EventItem";
 import Footer from "./Components/Footer";
-<<<<<<< HEAD
 import LoginForm from "./Components/LoginForm";
-
-const App = () => {
-  return (
-    // <BrowserRouter>
-      <div className="App">
-        <Header/>
-        <Faq/>
-        
-
-
-        {/*<Routes>
-          url경로와 컴포넌트를 맵핑합니다.
-          <Route path="/" element={<Mainpage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/explore" element={<EventList />} />
-=======
-import Mainpage from "./Page/Mainpage";
-import EventInfo from "./Containers/EventInfoContainer";
-import "react-router-dom";
+import "react-full-page";
 import { Route, Routes } from "react-router-dom";
+import Mainpage from "./Page/Mainpage";
 import Login from "./Page/Login";
 
 const App = () => {
   return (
     <div className="App">
       <Header />
+      {/* <Faq /> */}
       <Routes>
         {/* url경로와 컴포넌트를 맵핑합니다. */}
         <Route path="/" element={<Mainpage />} />
         <Route path="/login" element={<Login />} />
-        {/* <Route path="/explore" element={<EventList />} />
->>>>>>> kim
-          <Route path="/events" element={<EventInfoContainer />} />
-          <Route path="/explore" element={<join />} />
-          <Route path="/my/tickets" element={<MyTickets/>} />
-          <Route path="/my/likes" element={<MyLikes/>} />
-          <Route path="/my/events" element={<Myevent/>} />
-          <Route path="/my/profile" element={<Myprofile/>} />
-          */}
       </Routes>
     </div>
   );
