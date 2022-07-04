@@ -1,0 +1,82 @@
+@import '../../App.scss';
+
+//EventSearch
+.banner{
+  width: 100vw;
+  height : 800px;
+  margin: auto 0;
+}
+
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner img {
+  margin-bottom: 70px;  
+  width: 100% ;
+  height: 800px;
+
+
+}
+.search-tabs{
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  height: 70px;
+  margin: auto;
+  border: none;
+  border-radius: 7px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+.search-name{
+  display: flex;
+  justify-content: center;
+}
+.search-name form{
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.search-name form div{
+  margin-right: 7px;
+  font-size: 0.8rem;
+}
+.search-type {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  font-size: 0.8rem;
+}
+
+.search-type div{
+  margin-right: 7px;
+}
+
+.search-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-button button{
+  width: 70px;
+  border-radius: 7px;
+  border: none;
+}
+
+.search-button button:hover{
+  opacity: 0.9;
+  background-color: rgb(96, 161, 247) ;
+  color: white;
+}
+
+.input-group input:focus {
+  outline: none;
+}
+
+.input-group input::placeholder {
+  color: #b6bec8;
+}

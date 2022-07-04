@@ -1,5 +1,5 @@
+import "../Components/scss/Header.scss";
 import React from "react";
-//import { useNavigate } from 'react-router-dom';
 
 
 const Header = () => {
@@ -12,8 +12,8 @@ const Header = () => {
           <img src={process.env.PUBLIC_URL + "/DeveluvLogo.png"} />
           <h1>Develuv</h1>
           </a>
-          
         </div>
+
         <div className="menus">
           <ul>
             <li>
@@ -38,4 +38,3 @@ export default Header;
 //로고 -> home으로 이동
 //이벤트둘러보기 버튼
 //이벤트 주최하기버튼(로그인 후)
-//navigator를 사용하고싶은데......

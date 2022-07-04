@@ -1,0 +1,55 @@
+@import '../../App.scss';
+
+// id
+#leftWrap {
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+#introd2 {
+  margin-bottom: 100px;
+}
+
+#mp_Photo {
+  width: 60%;
+  height: 60%;
+}
+
+#introd2_photo {
+  width: 60%;
+}
+
+#introdText {
+  color: $White;
+  margin: 0%;
+  font-size: 75px;
+  font-family: 'Gothic A1', sans-serif;
+  color: $MainColor3;
+  margin-bottom: 25px;
+}
+
+// Class
+.halfWrap {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.wrapper {
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  background-color: $MainColor3;
+  border: none;
+  color: $White;
+  padding: 18px 46px 18px 46px;
+  border-radius: 10px;
+  font-size: 18px;
+  float: right;
+}
