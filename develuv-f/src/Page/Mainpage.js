@@ -7,7 +7,7 @@ const Mainpage = () => {
     <div>
       <FullPage>
         <Slide>
-          <div className="wrapper">
+          <div id="slide1">
             <div id="leftWrap" className="halfWrap">
               <div>
                 <h1>개발자들의 커뮤니티</h1>
@@ -24,12 +24,12 @@ const Mainpage = () => {
           </div>
         </Slide>
         <Slide>
-          <div className="wrapper">
+          <div id="slide2">
             <div className="halfWrap">
               <img id="introd2_photo" src="img/conference.jpg"></img>
             </div>
             <div className="halfWrap">
-              <div>
+              <div id="secondTitle">
                 <h1>개발 이벤트들은 모두 여기에서</h1>
                 <h1>한 번에 찾아보자!</h1>
                 <br></br>

@@ -1,6 +1,7 @@
 import "../Components/scss/Header.scss";
 import React from "react";
-
+import 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Header = () => {
 
@@ -20,7 +21,9 @@ const Header = () => {
               <a href="/">이벤트 둘러보기</a>
             </li>
             <li>
-              <a href="/">로그인</a>
+              <Link to="/login">
+                <a href="/">로그인</a>
+              </Link>
             </li>
             <li>
               <a href="/">회원가입</a>

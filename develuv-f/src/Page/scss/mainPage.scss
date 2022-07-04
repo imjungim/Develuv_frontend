@@ -6,17 +6,24 @@
   margin-top: 100px;
 }
 
+#leftWrap h1 {
+  color: $White;
+}
+
 #introd2 {
+  color: $White;
   margin-bottom: 100px;
 }
 
 #mp_Photo {
+  margin-top: 20%;
   width: 60%;
   height: 60%;
 }
 
 #introd2_photo {
   width: 60%;
+  border-radius: 25px;
 }
 
 #introdText {
@@ -24,8 +31,27 @@
   margin: 0%;
   font-size: 75px;
   font-family: 'Gothic A1', sans-serif;
-  color: $MainColor3;
   margin-bottom: 25px;
+}
+
+#slide1 {
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 1500 800' width='1500' height='800' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='1500' height='800' fill='%231363DF'%3E%3C/rect%3E%3Cpath d='M0 527L35.7 537.5C71.3 548 142.7 569 214.2 571C285.7 573 357.3 556 428.8 572.2C500.3 588.3 571.7 637.7 643 634.8C714.3 632 785.7 577 857 576.8C928.3 576.7 999.7 631.3 1071.2 647C1142.7 662.7 1214.3 639.3 1285.8 628.2C1357.3 617 1428.7 618 1464.3 618.5L1500 619L1500 801L1464.3 801C1428.7 801 1357.3 801 1285.8 801C1214.3 801 1142.7 801 1071.2 801C999.7 801 928.3 801 857 801C785.7 801 714.3 801 643 801C571.7 801 500.3 801 428.8 801C357.3 801 285.7 801 214.2 801C142.7 801 71.3 801 35.7 801L0 801Z' fill='%2347B5FF' stroke-linecap='round' stroke-linejoin='miter'%3E%3C/path%3E%3C/svg%3E");
+}
+
+#slide2 {
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 1500 800' width='1500' height='800' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='1500' height='800' fill='%2347B5FF'%3E%3C/rect%3E%3Cg fill='%23d8e7f1'%3E%3Ccircle r='172' cx='1360' cy='188'%3E%3C/circle%3E%3Ccircle r='97' cx='74' cy='224'%3E%3C/circle%3E%3Ccircle r='168' cx='595' cy='605'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+}
+
+#secondTitle {
+  color: black;
 }
 
 // Class
@@ -35,13 +61,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-}
-
-.wrapper {
-  background-size: cover;
-  display: flex;
-  width: 100%;
-  height: 100%;
 }
 
 .btn {
