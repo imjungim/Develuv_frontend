@@ -1,0 +1,29 @@
+// EventInfoTitle 부분
+
+.main{
+    display: flex;
+    margin-top : 46px;
+}
+.post{
+    flex-shrink: 0;
+   width: 740px;
+}
+.ticket{
+    flex-grow: 1;
+}
+.ticket div{
+    font-size: 18px;
+   margin-top: 0px;
+   margin-bottom: 23.5px;
+}
+.ticketPost{
+    border-top:2px dashed rgb(200, 200, 200);
+    border-bottom: 2px dashed rgb(200, 200, 200);
+    display: flex;
+   flex-wrap: wrap;
+   border-top: 2px dashed rgb(200, 200, 200);
+   padding: 26px 12px;
+   cursor: default;
+   transition: background-color 0.25s ease 0s;
+   opacity: 0.4
+}

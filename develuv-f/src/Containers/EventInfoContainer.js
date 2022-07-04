@@ -1,8 +1,8 @@
 import React from "react";
 import './EventInfo.scss'
 import { useState } from 'react'
-import EventInfoTitle from '../Components/EventInfoTitle'
-import EventInfoMain from '../Components/EventInfoMain'
+import EventInfoTitle from '../Components/EventInfo/EventInfoTitle'
+import EventInfoMain from '../Components/EventInfo/EventInfoMain'
 
 
 export default function EventInfo() {

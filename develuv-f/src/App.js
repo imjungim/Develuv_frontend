@@ -7,7 +7,7 @@ import EventSearch from "./Components/EventSearch";
 import EventItem from "./Components/EventItem";
 import Footer from "./Components/Footer";
 import Mainpage from "./Page/Mainpage";
-
+import EventInfo from './Containers/EventInfoContainer'
 const App = () => {
   return (
     // <BrowserRouter>

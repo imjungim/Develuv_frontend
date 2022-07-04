@@ -1,10 +1,8 @@
 import React from "react";
-import img from './test.png' // test 이미지파일 
 import { IoIosPeople } from 'react-icons/io'
-
-const eventCheck = {
-
-}
+import './EventInfoTitle.scss'
+import EventLike from './EventLike'
+import img from './test.png'
 export default function EventInfoTitle({ post }) {
     return (
         <div className="EventInfoTitle">
@@ -28,13 +26,16 @@ export default function EventInfoTitle({ post }) {
                 <div>
                     {post.주최자}
                 </div>
+                <div className="likeButton">
+                    <EventLike />
+                </div>
             </div>
             <div className="buyTicket">
                 <div className="icons">
                     <span><IoIosPeople size="20px" /></span>
                     <span>{post.현재참가인원}명</span>
                 </div>
-                <a href="/">등록</a>
+                <a className = "reg" href="/">등록</a>
             </div>
         </div>
     )
