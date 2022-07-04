@@ -1,0 +1,70 @@
+@import '../../App.scss';
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.header{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100vw;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: white;
+}
+
+.header_contents {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  width: 1200px;
+  height: 90px;
+}
+
+.header_logo img {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  margin-right: 10px;
+
+}
+
+.header_logo a {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-weight: 700; 
+ font-size: large;
+ text-decoration: none;
+ color: #313338;
+}
+
+.header_logo{
+  display: flex;
+}
+
+.menus ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+}
+
+.menus ul li a{
+  margin-right: 30px;
+  text-decoration: none;
+  color: #313338;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.header_logo h1{
+  font-size: 1.8rem;
+}
+
+.header a:hover {
+  opacity: 0.5;
+}

@@ -1,4 +1,5 @@
 import Header from "./Header";
+import "../Components/scss/EventSearch.scss";
 
 const EventSearch = (text) => {
   return (
