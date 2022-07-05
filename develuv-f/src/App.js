@@ -9,19 +9,20 @@ import Footer from "./Components/Footer";
 import LoginForm from "./Components/LoginForm";
 import "react-full-page";
 import { Route, Routes } from "react-router-dom";
-import Mainpage from "./Page/Mainpage";
+//import Mainpage from "./Page/Mainpage";
 import Login from "./Page/Login";
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
-      {/* <Faq /> */}
+      <Header/>
+      <Faq />
       <Routes>
         {/* url경로와 컴포넌트를 맵핑합니다. */}
-        <Route path="/" element={<Mainpage />} />
+        {/* <Route path="/" element={<Mainpage />} /> */}
         <Route path="/login" element={<Login />} />
       </Routes>
+
     </div>
   );
 };
