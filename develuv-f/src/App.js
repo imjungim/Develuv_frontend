@@ -11,18 +11,20 @@ import "react-full-page";
 import { Route, Routes } from "react-router-dom";
 //import Mainpage from "./Page/Mainpage";
 import Login from "./Page/Login";
+import EventInfo from "./Containers/EventInfoContainer";
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './Modules/index';
+
+const store = createStore(rootReducer); // 스토어를 만듭니다.
 
 const App = () => {
   return (
     <div className="App">
-      <Header/>
-      <Faq />
-      <Routes>
-        {/* url경로와 컴포넌트를 맵핑합니다. */}
-        {/* <Route path="/" element={<Mainpage />} /> */}
-        <Route path="/login" element={<Login />} />
-      </Routes>
-
+      <Header />
+      <Provider store={store}>
+        <EventInfo />
+      </Provider>
     </div>
   );
 };

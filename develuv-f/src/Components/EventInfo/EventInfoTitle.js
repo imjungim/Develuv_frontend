@@ -7,7 +7,6 @@ export default function EventInfoTitle({ post }) {
     return (
         <div className="EventInfoTitle">
             <img className="img" src={img} />
-
             <div className="title">
 
                 <h1>{post.제목}</h1>
@@ -26,7 +25,7 @@ export default function EventInfoTitle({ post }) {
                 <div>
                     {post.주최자}
                 </div>
-                <div className="likeButton">
+                <div>
                     <EventLike />
                 </div>
             </div>
