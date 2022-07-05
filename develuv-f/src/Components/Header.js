@@ -1,10 +1,15 @@
 import "../Components/scss/Header.scss";
-import React from "react";
+import React, { useState } from "react";
 import 'react-router-dom';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
 
+  let location = useLocation();
+
+  if (location.pathname === '/login') {
+    return null;
+  }
   return (
     <header className="header">
       <div className="header_contents">
