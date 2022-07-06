@@ -7,12 +7,11 @@ export default function EventInfoTitle({ post }) {
     return (
         <div className="EventInfoTitle">
             <img className="img" src={img} />
-
             <div className="title">
 
                 <h1>{post.제목}</h1>
                 <h2>{post.태그}</h2>
-                <div className="li">
+                <div className="titleLi">
                     일시
                 </div>
                 <div className="timeData">
@@ -20,13 +19,13 @@ export default function EventInfoTitle({ post }) {
                     <br />
                     {post.주최시간}
                 </div>
-                <div className="li">
+                <div className="titleLi">
                     주최
                 </div>
                 <div>
                     {post.주최자}
                 </div>
-                <div className="likeButton">
+                <div>
                     <EventLike />
                 </div>
             </div>

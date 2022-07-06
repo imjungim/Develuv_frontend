@@ -11,9 +11,14 @@ import "react-full-page";
 import { Route, Routes } from "react-router-dom";
 import Login from "./Page/Login";
 
+
+
+
+
 const App = () => {
   return (
     <div className="App">
+
       <Header/>
       <Faq/>
       <Routes>
@@ -22,6 +27,9 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/explore" element={<Explore/>} />
       </Routes>
+
+      <Header />
+
     </div>
   );
 };

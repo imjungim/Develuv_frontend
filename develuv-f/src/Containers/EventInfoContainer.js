@@ -1,11 +1,14 @@
-import React from "react";
 import './EventInfo.scss'
-import { useState } from 'react'
+import { useState} from 'react'
 import EventInfoTitle from '../Components/EventInfo/EventInfoTitle'
 import EventInfoMain from '../Components/EventInfo/EventInfoMain'
-
+import EventComments from '../Components/EventInfo/EventComment'
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {addCommnet} from '../Modules/Comment';
 
 export default function EventInfo() {
+
     const [post, setPost] = useState(
         {
             제목: "KOSTA 노드반",
@@ -17,12 +20,17 @@ export default function EventInfo() {
             주최자: "이창현",
             현재참가인원: 0,
         })
-
-
+        
+        const comments = useSelector(store => store.CommentReducer);
+        const dispatch = useDispatch();
+        const onCreate = text => dispatch(addCommnet(text));
+        
+      
     return (
         <div className="EventInfo">
             <EventInfoTitle post={post} />
-            <EventInfoMain  />
+            <EventInfoMain />
+            <EventComments comments={comments} onCreate={onCreate} />
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import './EventInfoMain.scss'
 export default function EventInfoMain(){
+    
     const post = ` 다들 Vim을 접하고 사용하게된 계기는 다르겠지만, 아직까지 사용하고 더 잘 쓰고 싶은
     사람들이 모여 Vim에 대해 이야기해보면 좋겠다는 생각에 자리를 마련했습니다.
     전반부는 참가하는 모든 분들이 짧게라도 어떻게 Vim을 접해서 시작했고, 

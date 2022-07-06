@@ -35,7 +35,7 @@
 }
 
 //일시,주최 글자 css
-.li {
+.titleLi {
     font-size: 15px;
     color: rgb(74, 74, 74);
     font-weight: bold;
@@ -72,7 +72,7 @@
 
 }
 
-a:hover {
+.reg:hover {
     background-color: #47B5FF;
 }
 
@@ -104,3 +104,4 @@ a:hover {
     margin-right: 23px;
     flex-grow: 1;
 }
+
