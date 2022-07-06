@@ -10,16 +10,18 @@ import LoginForm from "./Components/LoginForm";
 import "react-full-page";
 import { Route, Routes } from "react-router-dom";
 import Login from "./Page/Login";
-import EventInfo from "./Containers/EventInfoContainer";
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import rootReducer from './Modules/index';
 
-const store = createStore(rootReducer); // 스토어를 만듭니다.
+
+
+
 
 const App = () => {
   return (
     <div className="App">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2373d60126e5eab209ee8c0d788500b6af3ef827
       <Header/>
       <Faq/>
       <Routes>
@@ -28,6 +30,12 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/explore" element={<Explore/>} />
       </Routes>
+<<<<<<< HEAD
+=======
+
+      <Header />
+
+>>>>>>> 2373d60126e5eab209ee8c0d788500b6af3ef827
     </div>
   );
 };
