@@ -14,7 +14,7 @@ const Header = () => {
     <header className="header">
       <div className="header_contents">
         <div className="header_logo">
-          <a href="/">
+          <a href="/mainPage.js">
           <img src={process.env.PUBLIC_URL + "/DeveluvLogo.png"} />
           <h1>Develuv</h1>
           </a>
