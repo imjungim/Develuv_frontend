@@ -4,7 +4,7 @@ import Navi from "./Navi";
 const Faq = () => {
   return (
     <div className="faq">
-      <Navi />
+      <Navi/>
       <section className="faq-wrap">
         <div className="faq-title">
           <h3>참가자입니다👩🏻‍🦰</h3>
