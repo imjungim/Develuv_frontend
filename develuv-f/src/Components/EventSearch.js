@@ -10,11 +10,11 @@ const EventSearch = (text) => {
       <section className="searchbar">
         <div className="search-tabs">
           <div className="search-name">
-            <form action="" method="GET" className="input-group">
+            <form action="" method="GET" className="Search-input">
               <div>검색어</div>
-              <input
+              <input 
                 type="text"
-                value=""
+                
                 placeholder="이벤트제목을 입력하세요"
               />
             </form>
