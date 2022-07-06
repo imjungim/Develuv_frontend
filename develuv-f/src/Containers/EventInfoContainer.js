@@ -21,7 +21,7 @@ export default function EventInfo() {
             현재참가인원: 0,
         })
         
-        const comments = useSelector(state => state.CommentReducer);
+        const comments = useSelector(store => store.CommentReducer);
         const dispatch = useDispatch();
         const onCreate = text => dispatch(addCommnet(text));
         
