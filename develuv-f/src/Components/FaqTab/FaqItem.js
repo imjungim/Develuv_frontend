@@ -1,10 +1,11 @@
-import Navi from "./Navi";
+import Navi from "../Navi";
+import "../../Components/scss/Faq.scss";
 
 
 const FaqItem = () => {
   return (
     <div className="faq">
-      <Navi/>
+      
       <section className="faq-wrap">
         <div className="faq-title">
           <h3>참가자입니다👩🏻‍🦰</h3>

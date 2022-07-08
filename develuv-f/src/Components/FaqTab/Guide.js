@@ -1,6 +1,6 @@
-import "../Components/scss/Guide.scss";
-import Footer from "./Footer";
-import Navi from "./Navi";
+import "../FaqTab/scss/Guide.scss";
+
+import Navi from "../Navi";
 
 const Guide = () => {
   return (

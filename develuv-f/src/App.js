@@ -10,6 +10,8 @@ import { Route, Routes } from "react-router-dom";
 import Login from "./Page/Login";
 import Explore from "./Page/Explore";
 import EventInfo from "./Containers/EventInfoContainer";
+import Myprofile from "./Page/Myprofile";
+import Codeofconduct from "./Page/code-of-conduct";
 
 const App = () => {
   return (
@@ -23,6 +25,9 @@ const App = () => {
         <Route path="/explore" element={<Explore />} />
         <Route path="/EventInfo" element={<EventInfo />} />
         <Route path="/faq" element={<Faq />} />
+        <Route path="/code-of-conduct" element={<code-of-conduct/>}/>
+        <Route path="/myprofile" element={<Myprofile/>}/>
+      
       </Routes>
       <Footer/>
     </div>

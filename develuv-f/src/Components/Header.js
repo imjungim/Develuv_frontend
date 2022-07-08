@@ -4,6 +4,14 @@ import 'react-router-dom';
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  //이벤트 둘러보기 클릭시 변경
+  const [eventTitle, seteventTitle] = useState('이벤트 둘러보기');
+  const eventTitleChange = () =>{
+    seteventTitle('이벤트 주최하기')
+  }
+
+  const [loginTitle, setLoginTitle] = useState('로그인')
+
 
   let location = useLocation();
 
@@ -25,8 +33,8 @@ const Header = () => {
         <div className="menus">
           <ul>
             <li>
-              <Link to="/Explore">
-              <a href="/">이벤트 둘러보기</a>
+            <Link to="/Explore">
+              <a href="/" onClick={eventTitleChange}>{eventTitle}</a>
               </Link>
             </li>
             <li>

@@ -1,5 +1,5 @@
-import "../Components/scss/Policy.scss";
-import Navi from "./Navi";
+import "./scss/Policy.scss"
+import Navi from "../Navi";
 
 const Policy = () => {
   return (
