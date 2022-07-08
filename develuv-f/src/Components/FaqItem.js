@@ -1,7 +1,7 @@
-import "../Components/scss/Faq.scss";
 import Navi from "./Navi";
 
-const Faq = () => {
+
+const FaqItem = () => {
   return (
     <div className="faq">
       <Navi/>
@@ -81,6 +81,6 @@ const Faq = () => {
       </section>
     </div>
   );
-};
+}
 
-export default Faq;
+export default FaqItem;

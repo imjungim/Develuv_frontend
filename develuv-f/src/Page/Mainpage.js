@@ -1,6 +1,7 @@
 import React from "react";
 import "./scss/mainPage.scss";
 import { FullPage, Slide } from "react-full-page";
+import Footer from "../Components/Footer";
 
 const Mainpage = () => {
   return (
@@ -36,6 +37,7 @@ const Mainpage = () => {
                 <a>더 알아보기</a>
               </div>
             </div>
+            <Footer />
           </div>
         </Slide>
       </FullPage>

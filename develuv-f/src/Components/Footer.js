@@ -6,10 +6,12 @@ const Footer = () => {
       <div className="footer-wrap">
         <div className="footer-logo">
           <ul>
+            <div className="logo">
             <li>
               <img src={process.env.PUBLIC_URL + "/DeveluvLogo.png"} />
               <h1>Develuv</h1>
             </li>
+            </div>
             <li>
               <p>개발자를 위한 온 오프라인 이벤트 플랫폼</p>
             </li>

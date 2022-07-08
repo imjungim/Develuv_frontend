@@ -4,7 +4,7 @@ const ADD_COMMENT = 'ADD_COMMENT';
 
 /* 액션 생성함수 선언 */
 let nextId = 1; // todo 데이터에서 사용 할 고유 id
-export const addCommnet = text => ({
+export const addComment = text => ({
   type: ADD_COMMENT,
   comment: {
     id: nextId++, // 새 항목을 추가하고 nextId 값에 1을 더해줍니다.
