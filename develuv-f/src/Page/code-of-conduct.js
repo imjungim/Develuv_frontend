@@ -11,8 +11,8 @@ const Codeofconduct = () => {
         navitext3={"이용약관"}
         navitext4={"개인정보처리방침"}
       />
-  
-   <Guide/>
+          ㅇㅍㅊㅍㅊㅌㅍ
+      <Guide/>
     </div>
   );
 };

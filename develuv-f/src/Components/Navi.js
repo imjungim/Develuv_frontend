@@ -1,7 +1,7 @@
 import "../Components/scss/Navi.scss";
 import { Link } from "react-router-dom";
 
-const Navi = ({navitext1, navitext2, navitext3, navitext4}) => {
+const Navi = ({navitext1,navitext2,navitext3,navitext4}) => {
   return (
     <div className="Navi">
     <ul className="navi-tabs">

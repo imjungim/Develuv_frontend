@@ -3,7 +3,7 @@ import EventItem from "../Components/EventItem";
 import EventSearch from "../Components/EventSearch";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
-import Testpage from "../Components/Testpage";
+
 
 
 const Explore = ({
