@@ -1,11 +1,10 @@
-import "../Components/scss/Guide.scss";
-import Footer from "./Footer";
-import Navi from "./Navi";
+import "../FaqTab/scss/Guide.scss";
+
+import Navi from "../Navi";
 
 const Guide = () => {
   return (
     <div className="Guide">
-      <Navi />
       <div className="Guide-wrap">
         <div className="guide-content">
           <h2>Develuv 이용 가이드라인</h2>

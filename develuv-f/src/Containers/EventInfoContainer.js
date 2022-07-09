@@ -5,7 +5,7 @@ import EventInfoMain from '../Components/EventInfo/EventInfoMain'
 import EventComments from '../Components/EventInfo/EventComment'
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {addCommnet} from '../Modules/Comment';
+import {addComment} from '../Modules/Comment';
 
 export default function EventInfo() {
 
@@ -23,7 +23,7 @@ export default function EventInfo() {
         
         const comments = useSelector(store => store.CommentReducer);
         const dispatch = useDispatch();
-        const onCreate = text => dispatch(addCommnet(text));
+        const onCreate = text => dispatch(addComment(text));
         
       
     return (

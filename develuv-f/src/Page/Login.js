@@ -1,11 +1,11 @@
 import React from 'react';
+import LoginForm from '../Containers/LoginForm';
 import Footer from '../Components/Footer';
 
 const Login = () => {
   return (
     <div>
-      <h1>This is Login page</h1>
-      <Footer/>
+      <LoginForm/>
     </div>
   )
 }
