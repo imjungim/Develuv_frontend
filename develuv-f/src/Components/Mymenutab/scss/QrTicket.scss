@@ -1,0 +1,35 @@
+@import "../../../App.scss";
+
+.qrticket {
+  width: 100%;
+  height: 100%;
+
+}
+
+.qr-wrap{
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.qr-info{
+  width: 250px;
+  height: 250px;
+
+
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.qr-content {
+  margin-bottom: 50px;
+}
+.qr-info-text{
+  width: 250px;
+  height: 60px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.qrimage{
+  margin: 0 auto;
+}

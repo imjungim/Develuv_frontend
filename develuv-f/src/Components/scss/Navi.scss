@@ -4,6 +4,8 @@
   height: 50px;
   display: flex;
   justify-content: center;
+
+  margin-bottom: 20px;
 }
 
 .navi-tabs{
@@ -14,7 +16,11 @@
   align-items: center;
   list-style: none;
   border-bottom: 0.5px solid #b6bec8;
+  
   padding-left:0px ;
+  padding-bottom: 3px;
+  margin-top: 5px;
+
 
 }
 

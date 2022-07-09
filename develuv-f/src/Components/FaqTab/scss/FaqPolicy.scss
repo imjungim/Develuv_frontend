@@ -1,25 +1,26 @@
 @import '../../../App.scss';
 
-.privacy {
+.Policy {
   width: 100%;
   height: 100%;
+  font-size: 0.8rem;
 }
 
-.privacy-wrap{
+.policy-wrap{
   width: 1200px;
   height: 100%;
   margin: 0 auto;
 }
 
-.privacy-contents{
+.policy-contents{
   margin-bottom: 50px;
 }
 
-.privacy-contents h1{
-  margin-bottom: 5px;
+.policy-contents h3{
+  margin-bottom: 10px;
 }
 
-.privacy-contents p{
+.policy-contents p{
   margin-bottom: 5px;
 }
 

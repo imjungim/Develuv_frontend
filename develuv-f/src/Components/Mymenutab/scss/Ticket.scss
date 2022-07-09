@@ -1,0 +1,36 @@
+@import "../../../App.scss";
+
+.ticket{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.ticket-wrap{
+  width: 1000px;
+  height: 300px;
+  display: flex;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 0 auto;
+}
+.ticket-image img{
+  width: 500px;
+  height: 300px;
+}
+
+.ticket-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ticket-content{
+  width: 400px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
