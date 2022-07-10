@@ -12,8 +12,7 @@ import Explore from "./Page/Explore";
 import EventInfo from "./Containers/EventInfoContainer";
 import Myprofile from "./Page/Myprofile";
 import Codeofconduct from "./Page/code-of-conduct";
-import EventInfo from "./Containers/EventInfoContainer";
-
+import EventCreateContainer from "./Containers/EventCreateContainer";
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './Modules/index';
@@ -36,9 +35,10 @@ const App = () => {
           <Route path="/faq" element={<Faq />} />
           <Route path="/code-of-conduct" element={<code-of-conduct />} />
           <Route path="/myprofile" element={<Myprofile />} />
+          <Route path='/EventCreate' element = {<EventCreateContainer/>} />
         </Routes>
       </Provider>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
