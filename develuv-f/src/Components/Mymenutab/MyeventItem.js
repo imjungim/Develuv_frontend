@@ -1,4 +1,5 @@
 import "./scss/Myevent.scss";
+import { Link } from "react-router-dom";
 
 const MyeventItem = () => {
   return (
@@ -9,7 +10,7 @@ const MyeventItem = () => {
 
       <div className="myevent-info">
         <div className="myevent-description">
-          <a href="/">
+          <Link to="/my/events/attendee">
             <div className="event-image">
             <img src={process.env.PUBLIC_URL + "/user.jpg"} />
             </div>
@@ -18,7 +19,7 @@ const MyeventItem = () => {
             <p>이벤트설명~</p>
             <p>이벤트명</p>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

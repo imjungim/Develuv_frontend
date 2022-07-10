@@ -1,0 +1,20 @@
+@import '../../App.scss';
+
+.my-unregister {
+  max-width: 1200px;
+  height: 500px;
+  margin: 50px auto;
+}
+
+.my-unregister button{
+  width: 200px;
+  height: 45px;
+  border: 0;
+  border-radius: 7px;
+  color: white;
+  background-color:rgb(253, 1, 1) ;
+}
+
+.my-unregister button:hover{
+  opacity: 0.8;
+}

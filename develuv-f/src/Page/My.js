@@ -16,11 +16,11 @@ const My = () => {
         navitext4={"프로필설정"}
       />
       <Profileform/>
-      {/* <Ticket/>
-      <QrTicket/> */}
-      {/* <MyeventItem/> */}
+      <Ticket/>
+      <QrTicket/>
+    <MyeventItem/>
      
-      
+ 
     </div>
   );
 };

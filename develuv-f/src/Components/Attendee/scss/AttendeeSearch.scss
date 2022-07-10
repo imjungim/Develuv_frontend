@@ -1,0 +1,22 @@
+@import "../../../App.scss";
+
+.attendee-search{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.attendee-search input {
+  width: 360px;
+  height: 36px;
+  font-size: 16px;
+  border-radius: 7px;
+  border: 1px solid #d3dce6;
+  transition: border-color 200ms ease-in-out;
+}
+
+.attendee-search input:focus{
+  outline: none;
+  box-shadow: none;
+  border-color: #1fb6ff;
+}

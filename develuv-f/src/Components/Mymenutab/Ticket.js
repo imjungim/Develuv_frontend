@@ -2,14 +2,13 @@ import "./scss/Ticket.scss";
 
 const Ticket = () => {
   return (
-    <div className="ticket">
-      <div className="ticket-wrap">
+      <div className="ticket">
         <div className="ticket-image">
           <img src={process.env.PUBLIC_URL + "./ticket.jpg"} />
         </div>
         <div className="ticket-content">
           <div className="ticket-title">
-            <h2>KOSTA Node js</h2>
+            <h3>KOSTA Node js</h3>
             <p>서울 금천구</p>
           </div>
 
@@ -26,7 +25,7 @@ const Ticket = () => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 
