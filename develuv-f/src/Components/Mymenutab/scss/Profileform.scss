@@ -1,0 +1,116 @@
+@import "../../../App.scss";
+
+.profile{
+  width: 600px;
+  height: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.profile-info{
+  width: 400px;
+}
+
+.profile-info h1{
+  margin-bottom: 30px;
+}
+
+.profile-email{
+  margin-bottom: 10px;
+}
+.label{
+  margin-bottom: 10px;
+}
+.profile-password{
+  width: 400px;
+
+}
+
+.input-name{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-name input{
+  width: 150px;
+  height: 30px;
+  border: 0;
+  border-radius: 7px;
+  outline: none;
+  background-color: #f8f9fa;
+  
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+}
+
+.profile-button button{
+  width: 100px;
+  height: 35px;
+  border: 0;
+  border-radius: 7px;
+  color: white;
+  background-color:$MainColor3 ;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.profile-button:hover {
+  opacity: 0.8;
+}
+.profileName {
+  display: flex;
+}
+
+.profile-password h1{
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.password-text {
+  margin-bottom: 10px;
+}
+
+.password-text label{
+  margin-right: 3px;
+}
+
+.password-text input {
+  width: 200px;
+  height: 35px;
+  border: 0;
+  border-radius: 7px;
+  outline: none;
+  background-color: #f8f9fa;
+}
+
+.unregister{
+  width: 400px;
+}
+
+.unregister h2{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.unregister button{
+  width: 100px;
+  height: 35px;
+  border: 0;
+  border-radius: 7px;
+  color: white;
+  background-color:rgb(253, 1, 1) ;
+}
+
+.unregister button:hover{
+  opacity: 0.8;
+}

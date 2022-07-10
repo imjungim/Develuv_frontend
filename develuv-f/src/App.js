@@ -10,11 +10,13 @@ import LoginForm from "./Components/LoginForm";
 import Login from "./Page/Login";
 import Explore from "./Page/Explore";
 import EventInfo from "./Containers/EventInfoContainer";
-import Myprofile from "./Page/Mymenu";
+import Myprofile from "./Page/My";
 import CodeofConduct from "./Page/CodeofConduct";
 import Terms from "./Page/Terms"
 import Privacy from "./Page/Privacy";
-import Mymenu from "./Page/Mymenu";
+import My from "./Page/My";
+import EventListAll from "./Page/EventListAll";
+import Unregister from "./Page/Unregister";
 
 
 
@@ -29,12 +31,20 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/EventInfo" element={<EventInfo />} />
+        
         <Route path="/faq" element={<Faq />} />
         <Route path="/code-of-conduct" element={<CodeofConduct/>}/>
         <Route path="/terms" element={<Terms/>}/>
         <Route path="/privacy" element={<Privacy/>}/>
-        <Route path="/mymenu" element={<Mymenu/>}/>
-      
+       
+        <Route path="/my/:ticket" element={<My/>}/>
+        <Route path="/my/:events" element={<My/>}/>
+        <Route path="/my/:likes" element={<My/>}/>
+        <Route path="/my/:profile" element={<My/>}/>
+        <Route path="/unregister" element={<Unregister/>}/>
+
+        <Route path="/explore/:all" element={<EventListAll/>} />
+
       </Routes>
       <Footer/>
     </div>
