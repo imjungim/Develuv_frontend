@@ -23,10 +23,12 @@ import AttendeePage from "./Components/Attendee/Attendee";
 const App = () => {
   return (
     <div className="App">
-      <Header />
+
+      <Header/>
+      {/* <Faq/> */}
+      <Provider store={store}>
       <Routes>
         {/* url경로와 컴포넌트를 맵핑합니다. */}
-        {/* <Route path="/" element={<Header />} /> */}
         <Route path="/" element={<Mainpage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/explore" element={<Explore />} />
@@ -48,8 +50,11 @@ const App = () => {
 
         <Route path="/explore/all" element={<EventListAll/>} />
 
+        {/* 이벤트 생성 컨테이너 */}
+        <Route path='/EventCreate' element = {<EventCreateContainer/>} />
       </Routes>
-      <Footer/>
+      </Provider>
+      {/* <Header /> */}
     </div>
   );
 };
