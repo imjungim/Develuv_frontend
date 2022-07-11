@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginForm from '../Containers/LoginForm';
+import LoginForm from '../Components/LoginForm';
 import Footer from '../Components/Footer';
 
 const Login = () => {
