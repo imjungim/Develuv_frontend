@@ -5,7 +5,7 @@ import Footer from '../Components/Footer';
 const Login = () => {
   return (
     <div>
-      <LoginForm/>
+      <LoginForm isLoginPage={true}/>
     </div>
   )
 }

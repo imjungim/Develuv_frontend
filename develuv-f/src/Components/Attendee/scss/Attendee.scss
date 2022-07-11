@@ -1,0 +1,41 @@
+@import "../../../App.scss";
+
+.attendee{
+  width: 1200px;
+  height: 100vh;
+  margin: 50px auto;
+
+}
+
+.attendee h1{
+  margin-bottom: 40px;
+}
+
+.attendee-table {
+  width: 1200px;
+  border-radius: 7px;
+  box-shadow: $BoxShadow;
+
+  margin: 40px auto;
+
+
+}
+
+.attendee-table th {
+  margin-right: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.attendee-table td {
+  margin-right: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.attendee-button{
+  border: 0;
+  border-radius: 7px;
+  color: white;
+  background-color:rgb(238, 111, 111) ;
+}

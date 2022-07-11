@@ -90,20 +90,31 @@
   color: white;
 }
 
-.Search-input input {
-  height: 22px;
+.search-name input {
+  height: 25px;
   font-size: 15px;
   border: 0;
   border-radius: 7px;
-  outline: none;
-  background-color: #f8f9fa;
+  border: 1px solid #d3dce6;
+  transition: border-color 200ms ease-in-out;
 }
 
-.Search-input input:focus {
+.search-name input:focus {
   outline: none;
 }
 
-.Search-input input::placeholder {
+.search-name input:focus{
+  outline: none;
+  box-shadow: none;
+  border-color: #1fb6ff;
+}
+
+.search-name input::placeholder {
   color: #b6bec8;
 }
 
+.search-type select:focus{
+  outline: none;
+  box-shadow: none;
+  border-color: #1fb6ff;
+}

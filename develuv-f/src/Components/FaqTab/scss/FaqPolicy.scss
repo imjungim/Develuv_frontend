@@ -1,12 +1,14 @@
 @import '../../../App.scss';
 
 .Policy {
-  width: 100%;
+  max-width: 1060px;
   height: 100%;
+  margin: 0 auto;
+  font-size: 0.8rem;
 }
 
 .policy-wrap{
-  width: 1200px;
+  max-width: 1060px;
   height: 100%;
   margin: 0 auto;
 }
@@ -15,8 +17,8 @@
   margin-bottom: 50px;
 }
 
-.policy-contents h1{
-  margin-bottom: 5px;
+.policy-contents h3{
+  margin-bottom: 10px;
 }
 
 .policy-contents p{

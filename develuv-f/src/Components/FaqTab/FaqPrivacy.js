@@ -1,10 +1,9 @@
-import "../FaqTab/scss/privacy.scss";
+import "../FaqTab/scss/Faqprivacy.scss";
 import Navi from "../Navi";
 
 const Privacy = () => {
   return (
     <div className="privacy">
-      <Navi />
       <div className="privacy-wrap">
         <div className="privacy-contents">
           <p>
@@ -19,7 +18,7 @@ const Privacy = () => {
           </p>
         </div>
         <div className="privacy-contents">
-          <h1>제 1 조 개인정보 수집 및 이용</h1>
+          <h3>제 1 조 개인정보 수집 및 이용</h3>
           <p>
             1. 회원가입 - 필수적으로 이메일, 이름 비밀번호를 수집합니다.
             선택적으로 전화번호를 수집합니다. 본인확인, 가입 의사 확인, 행사
@@ -47,7 +46,7 @@ const Privacy = () => {
           </p>
         </div>
         <div className="privacy-contents">
-          <h1>제 2 조 개인정보 처리 위탁</h1>
+          <h3>제 2 조 개인정보 처리 위탁</h3>
           <p>
             회사는 이용자의 동의 없이 개인정보를 제 3자에게 제공하지 않으며,
             서비스 이용을 위해 회원이 직접 동의한 경우에만 정보 제공이
@@ -60,7 +59,7 @@ const Privacy = () => {
         </div>
 
         <div className="privacy-contents">
-          <h1>제 3 조 개인정보 파기 절차 및 방법</h1>
+          <h3>제 3 조 개인정보 파기 절차 및 방법</h3>
           <p>
             회사는 회원이 탈퇴를 원하여 회원탈퇴 기능을 이용할 시 이메일, 이름,
             비밀번호, 전화번호, 저장된 카드 정보를 파기합니다. 개인정보는
