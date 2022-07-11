@@ -37,7 +37,6 @@ const Mainpage = () => {
                 <a>더 알아보기</a>
               </div>
             </div>
-            <Footer />
           </div>
         </Slide>
       </FullPage>
