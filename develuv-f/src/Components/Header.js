@@ -1,16 +1,12 @@
 import "../Components/scss/Header.scss";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import 'react-router-dom';
 import { Link, Navigate, useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   //이벤트 둘러보기 클릭시 변경
-  const [eventTitle, setEventTitle] = useState('이벤트 둘러보기');
-  
-  const goToEventCreate = () => {
-    Navigate('/EventCreate')
-  }
+  const [eventTitle, seteventTitle] = useState(true);
 
   const eventTitleChange = () =>{
     setEventTitle('이벤트 주최하기')
@@ -20,29 +16,40 @@ const Header = () => {
   
   const [loginTitle, setLoginTitle] = useState('로그인')
 
+  const [createEventURL,setcreateEventURL] = useState('/Explore')
 
   let location = useLocation();
+
+  useEffect(() => {
+    if(location.pathname == "/Explore"){
+      seteventTitle(false)
+      setcreateEventURL('/EventCreate')
+    }else{
+      seteventTitle(true)
+      setcreateEventURL('/Explore')
+    }
+  }, [ location.pathname ])
 
   if (location.pathname === '/login') {
     return null;
   }
   return (
     <header className="header">
-      <div className="header_contents"> 
+      <div className="header_contents">
         <div className="header_logo">
           <Link to="/">
-          <a href="/">
-          <img src={process.env.PUBLIC_URL + "/DeveluvLogo.png"} />
-          <h1>Develuv</h1>
-          </a>
+            <a href="/">
+              <img src={process.env.PUBLIC_URL + "/DeveluvLogo.png"} />
+              <h1>Develuv</h1>
+            </a>
           </Link>
         </div>
 
         <div className="menus">
           <ul>
             <li>
-            <Link to="/explore">
-              <a onClick={eventTitleChange}>{eventTitle}</a>
+              <Link to = {createEventURL}>
+                <a href="/" >{eventTitle ? "이벤트 둘러보기" : "이벤트 주최하기"}</a>
               </Link>
             </li>
             <li>
@@ -52,7 +59,7 @@ const Header = () => {
             </li>
             <li>
               <Link to="signup">
-              <a onClick={goToEventCreate}>회원가입</a>
+                <a href="/">회원가입</a>
               </Link>
             </li>
           </ul>
