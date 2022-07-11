@@ -1,14 +1,16 @@
-import "../Components/scss/EventItem.scss";
-import EventLike from "./EventInfo/EventLike";
+import "./EventItem.scss";
+import EventLike from "../EventInfo/EventLike";
 
-const EventItem = ({ eventList }) => {
+const EventItem = ({ eventList, eventtype, eventdescript }) => {
   return (
     <div>
       <div id="event-board">
-        <div className="new-event">
-          <h3>최신이벤트</h3>
-          <div>최신으로 등록된 이벤트를 만나보세요</div>
-        </div>
+ 
+          <div className="new-event">
+            <h3>{eventtype}</h3>
+            <div>{eventdescript}</div>
+          </div>
+ 
         <div className="eventList-tabs">
           {eventList.map((it) => (
             <div className="event-box">
@@ -33,7 +35,7 @@ const EventItem = ({ eventList }) => {
         </div>
       </div>
 
-      <div id="event-board">
+      {/* <div id="event-board">
         <div className="new-event">
           <h3>온라인이벤트</h3>
           <div>신청이 곧 마감되는 이벤트들입니다.</div>
@@ -60,7 +62,7 @@ const EventItem = ({ eventList }) => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

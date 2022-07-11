@@ -1,9 +1,11 @@
 import Navi from "../Navi";
-import "../../Components/scss/Faq.scss";
+import "./scss/FaqItem.scss";
 
 
 const FaqItem = () => {
+
   return (
+ 
     <div className="faq">
       
       <section className="faq-wrap">

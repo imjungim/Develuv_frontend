@@ -1,5 +1,5 @@
 import "./scss/AttendeePage.scss"
-import attendee from "../Components/Attendee/Attendee"
+import Attendee from "../Components/Attendee/Attendee"
 
 const AttendeePage = () => {
   return (
@@ -8,3 +8,5 @@ const AttendeePage = () => {
     </div>
   )
 }
+
+export default AttendeePage;

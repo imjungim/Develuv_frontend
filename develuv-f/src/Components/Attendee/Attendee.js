@@ -38,6 +38,8 @@ const Attendee = () => {
             <td>010-1111-1111</td>
             <td>2022-07-10</td>
             <td>KOSTA Nodejs</td>
+            <td></td>
+            <td><button className="attendee-button" type="submit" onClick={()=>alert('취소하시겠습니까?')}>확인</button></td>
           </tr>
           <tr>
             <td>
@@ -50,7 +52,7 @@ const Attendee = () => {
             <td>2022-07-10</td>
             <td>KOSTA Nodejs</td>
             <td></td>
-            <td><button className="attendee-button" type="submit">확인</button></td>
+            <td><button className="attendee-button" type="submit" onClick={()=>alert('취소하시겠습니까?')}>확인</button></td>
           </tr>
         </tbody>
       </table>

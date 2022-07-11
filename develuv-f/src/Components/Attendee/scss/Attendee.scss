@@ -17,8 +17,6 @@
   box-shadow: $BoxShadow;
 
   margin: 40px auto;
-
-
 }
 
 .attendee-table th {
@@ -38,4 +36,13 @@
   border-radius: 7px;
   color: white;
   background-color:rgb(238, 111, 111) ;
+}
+
+.attendee-button:hover{
+  opacity: 0.8;
+  cursor: pointer;
+  
+}
+.attendee-button:focus{
+
 }

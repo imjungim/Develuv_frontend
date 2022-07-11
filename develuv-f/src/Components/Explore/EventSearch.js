@@ -1,6 +1,6 @@
 import React,{useState} from "react";
-import Header from "./Header";
-import "../Components/scss/EventSearch.scss";
+
+import "./EventSearch.scss";
 
 const EventSearch = () => {
   const [text, setText] = useState('');

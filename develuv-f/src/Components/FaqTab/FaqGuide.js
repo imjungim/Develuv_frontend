@@ -3,6 +3,7 @@ import "../FaqTab/scss/FaqGuide.scss";
 import Navi from "../Navi";
 
 const Guide = () => {
+
   return (
     <div className="Guide">
       <div className="Guide-wrap">

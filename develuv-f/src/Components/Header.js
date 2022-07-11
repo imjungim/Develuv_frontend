@@ -1,15 +1,23 @@
 import "../Components/scss/Header.scss";
 import React, { useState } from "react";
 import 'react-router-dom';
-import { Link, useLocation } from "react-router-dom";
+import { Link, Navigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   //이벤트 둘러보기 클릭시 변경
-  const [eventTitle, seteventTitle] = useState('이벤트 둘러보기');
-  const eventTitleChange = () =>{
-    seteventTitle('이벤트 주최하기')
+  const [eventTitle, setEventTitle] = useState('이벤트 둘러보기');
+  
+  const goToEventCreate = () => {
+    Navigate('/EventCreate')
   }
 
+  const eventTitleChange = () =>{
+    setEventTitle('이벤트 주최하기')
+    goToEventCreate();
+  }
+
+  
   const [loginTitle, setLoginTitle] = useState('로그인')
 
 
@@ -33,18 +41,18 @@ const Header = () => {
         <div className="menus">
           <ul>
             <li>
-            <Link to="/Explore">
-              <a href="/" onClick={eventTitleChange}>{eventTitle}</a>
+            <Link to="/explore">
+              <a onClick={eventTitleChange}>{eventTitle}</a>
               </Link>
             </li>
             <li>
               <Link to="/login">
-                <a href="/">로그인</a>
+                <a>로그인</a>
               </Link>
             </li>
             <li>
               <Link to="signup">
-              <a href="/">회원가입</a>
+              <a onClick={goToEventCreate}>회원가입</a>
               </Link>
             </li>
           </ul>

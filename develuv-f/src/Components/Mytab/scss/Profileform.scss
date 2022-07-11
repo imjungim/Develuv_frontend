@@ -70,8 +70,9 @@
   margin-bottom: 10px;
 }
 
-.profile-button:hover {
+.profile-button button:hover {
   opacity: 0.8;
+  cursor: pointer;
 }
 .profileName {
   display: flex;
@@ -119,4 +120,5 @@
 
 .unregister button:hover{
   opacity: 0.8;
+  cursor: pointer;
 }
