@@ -1,6 +1,6 @@
 import React from "react";
 import './EventCreateMain.scss'
-const EventCreateMain = ({eventArticle, setEventArticle}) => {
+const EventCreateMain = ({ eventArticle, setEventArticle,onChange }) => {
 
 
     return (
@@ -61,7 +61,11 @@ const EventCreateMain = ({eventArticle, setEventArticle}) => {
                         </div>
                     </div>
                 </div>
-             
+            </div>
+               
+            <div className="eventMax">
+                <div className="createTitle">이벤트 최대 인원</div>
+                <input name="eventMax" className="createInput" placeholder="이벤트 최대인원" value={eventArticle.eventMax} onChange={onChange} />
             </div>
         </div >
     )

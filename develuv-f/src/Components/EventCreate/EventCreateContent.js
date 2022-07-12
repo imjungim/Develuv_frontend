@@ -6,11 +6,11 @@ const EventCreateContent = ({ eventArticle, onChange }) => {
         <div id="createContent" >
             <div id="eventTitle">
                 
-                <div id="createTitle">이벤트 제목</div>
-                <input name="eventTitle" id="createInput" placeholder="이벤트 제목" value={eventArticle.eventTitle} onChange={onChange} />
+                <div className="createTitle">이벤트 제목</div>
+                <input name="eventTitle" className="createInput" placeholder="이벤트 제목" value={eventArticle.eventTitle} onChange={onChange} />
                 
-                <div id="createTitle">이벤트 기간</div>
-                <input name="eventTime" id="createInput" placeholder="이벤트 기간" value={eventArticle.eventTime} onChange={onChange} />
+                <div className="createTitle">이벤트 기간</div>
+                <input name="eventTime" className="createInput" placeholder="이벤트 기간" value={eventArticle.eventTime} onChange={onChange} />
                 
             </div>
             <div id="eventText">

@@ -5,7 +5,7 @@
     
 }
 
-#createTitle{
+.createTitle{
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -16,13 +16,13 @@
     padding-top:30px;
 }
 
-#createInput{
+.createInput{
     background: rgb(255, 255, 255);
     border: 1px solid rgb(196, 200, 204);
     box-sizing: border-box;
     border-radius: 8px;
     padding: 14px 16px;
-    width: 500px;
+    width: 430px;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -36,7 +36,7 @@
     box-sizing: border-box;
     border-radius: 8px;
     padding: 14px 16px;
-    width: 900px;
+    width: 700px;
     height: 500px;
     font-style: normal;
     font-weight: normal;
@@ -48,3 +48,4 @@
 #eventText{
     padding-top:50px;
 }
+
