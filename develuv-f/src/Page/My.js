@@ -8,7 +8,7 @@ import Profileform from "../Components/Mytab/Profileform";
 import EventItem from "../Components/Explore/EventItem";
 import Unregister from "./Unregister";
 import AttendeePage from "./AttendeePage";
-import LikeEvent from "../Components/Mytab/LikeEvent";
+import MyLikeEvent from "../Components/Mytab/MyLikeEvent";
 
 const My = () => {
   const dummyList = [
@@ -41,7 +41,7 @@ const My = () => {
       title: "Node Js KOSTA",
     },
   ];
-
+  //url에 따른 페이지 전환
   let location = useLocation();
   const [params, setParams] = useState(location.pathname);
   console.log(params);
@@ -56,24 +56,35 @@ const My = () => {
       case "/my/events/attendee":
         return <AttendeePage />;
       case "/my/likes":
-        return <LikeEvent />;
+        return <MyLikeEvent />;
       case "/my/profile":
-        return <Profileform/>;
+        return <Profileform />;
       case "/unregister":
         return <Unregister />;
       default:
-        return <MyTicket/>;
+        return <MyTicket />;
     }
   };
+  //url 변경 props
+  const urlPage = {
+    page1: "/my/ticket",
+    page2: "/my/events",
+    page3: "/my/likes",
+    page4: "/my/profile",
+  };
+
+  const naviMenu = {
+    menu1: "내티켓",
+    menu2: "주최한이벤트",
+    menu3: "좋아요한이벤트",
+    menu4: "내티켓",
+  };
+
   return (
     <div className="my">
-      <Navi
-        navitext1={"내티켓"}
-        navitext2={"주최한이벤트"}
-        navitext3={"좋아요한이벤트"}
-        navitext4={"프로필설정"}
-      />
-{choosePage()}
+      <Navi navimenu={naviMenu} urlpage={urlPage} />
+
+      {choosePage()}
     </div>
   );
 };

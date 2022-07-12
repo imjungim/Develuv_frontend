@@ -43,7 +43,7 @@ const App = () => {
         <Route path="/code-of-conduct" element={<Faq />} />
         <Route path="/terms" element={<Faq />} />
         <Route path="/privacy" element={<Faq />} />
-
+ 
         {/* myprofile탭 */}
         <Route path="/my/ticket" element={<My />} />
         <Route path="/my/events" element={<My />} />
@@ -54,6 +54,7 @@ const App = () => {
       </Routes>
       {/* </Provider> */}
       {/* <Header /> */}
+      <Footer/>
     </div>
   );
 };

@@ -1,28 +1,30 @@
 import "../Components/scss/Navi.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import React, {useState, useEffect} from "react";
 
-const Navi = ({ navitext1, navitext2, navitext3, navitext4 }) => {
+const Navi = ({ navimenu,urlpage}) => {
+ console.log(urlpage)
   return (
     <div className="Navi">
       <ul className="navi-tabs">
         <li>
-          <Link to="/faq">
-            <a href="/">{navitext1}</a>
+          <Link to={urlpage.page1}>
+            <a>{navimenu.menu1}</a>
           </Link>
         </li>
         <li>
-          <Link to="/code-of-conduct">
-            <a href="/">{navitext2}</a>
+          <Link to={urlpage.page2}>
+            <a>{navimenu.menu2}</a>
           </Link>
         </li>
         <li>
-          <Link to="/terms">
-            <a href="/">{navitext3}</a>
+          <Link to={urlpage.page3}>
+            <a>{navimenu.menu3}</a>
           </Link>
         </li>
         <li>
-          <Link to="/privacy">
-            <a href="/">{navitext4}</a>
+          <Link to={urlpage.page4}>
+            <a>{navimenu.menu4}</a>
           </Link>
         </li>
       </ul>

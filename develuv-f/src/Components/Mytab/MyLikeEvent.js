@@ -1,9 +1,8 @@
-import React from "react";
-import EventItem from "../Components/Explore/EventItem";
-import EventSearch from "../Components/Explore//EventSearch";
+import "./scss/Myevent.scss";
+import EventLike from "../EventInfo/EventLike";
 
+const MyLikeEvent = () => {
 
-const Explore = () => {
   const dummyList = [
     {
       id: 1,
@@ -50,14 +49,38 @@ const Explore = () => {
     }
   ];
 
-  return (
-    <div>
-      <EventSearch />
-      <EventItem eventList={dummyList} eventtype={"최신이벤트"} eventdescript={"등록된지 얼마 안된 이벤트를 만나보세요!"}/>
-      <EventItem eventList={dummyList} eventtype={"온라인이벤트"} eventdescript={"집에서 안전하게 어디서나 들을 수 있는 온라인 이벤트!"}/>
-      <EventItem eventList={dummyList} eventtype={"마감임박"}  eventdescript={"집에서 안전하게 어디서나 들을 수 있는 온라인 이벤트!"}/>
-    </div>
-  );
-};
 
-export default Explore;
+  return (
+    <div id="event-board">
+    <div className="new-event">
+      <h3>좋아요 한 이벤트</h3>
+      <div>좋아요를 누른 이벤트입니다.</div>
+    </div>
+
+    <div className="eventList-tabs">
+      {dummyList.map((it) => (
+        <div className="event-box">
+          <a href="/">
+            <div className="event-img">
+              <img src={process.env.PUBLIC_URL + "/user.jpg"} />
+            </div>
+            <div>
+              <div className="event-date">
+                {it.date} {it.type}
+              </div>
+              <div>{it.title}</div>
+            </div>
+          </a>
+
+          <div className="like-button">
+            {" "}
+            <EventLike />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+  )
+}
+
+export default MyLikeEvent;
