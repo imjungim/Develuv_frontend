@@ -1,23 +1,28 @@
+
 // EventInfoTitle 부분
 
-.main{
+.eventMainPost{
     display: flex;
     margin-top : 46px;
     border-bottom: 2px solid rgb(74, 74, 74);
 }
-.post{
+.eventPost{
     flex-shrink: 0;
    width: 670px;
    margin-right : 30px;
 }
-.ticket{
-    flex-grow: 1;
+.ticketArea{
+    flex-shrink: 0;
+    width: 310px;
+    margin-left: auto;
 }
-.ticket div{
+
+.ticketName{
     font-size: 18px;
    margin-top: 0px;
    margin-bottom: 23.5px;
 }
+
 .ticketPost{
     border-top:2px dashed rgb(200, 200, 200);
     border-bottom: 2px dashed rgb(200, 200, 200);
