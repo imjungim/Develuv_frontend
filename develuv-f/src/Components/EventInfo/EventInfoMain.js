@@ -12,12 +12,12 @@ export default function EventInfoMain(){
     
     `
     return(
-        <div className= "main">
-            <div className = "post">
+        <div className= "eventMainPost">
+            <div className = "eventPost">
             {post}
             </div>
-            <div className = "ticket">
-                <div>티켓</div>
+            <div className = "ticketArea">
+                <div className='ticketName'>티켓</div>
                 <div className='ticketPost'>티켓 내용</div>
             </div>
         </div>

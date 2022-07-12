@@ -11,6 +11,7 @@ const EventCreateContainer = ()=>{
         eventTitle: "",
         eventTime: "",
         eventText:"",
+        eventMax:0,
     });
     const onChange = e => {
         const { name, value } = e.target;
@@ -22,7 +23,7 @@ const EventCreateContainer = ()=>{
 
         return(
             <div id ="EventCreateContainer">
-                <EventCreateMain eventArticle={eventArticle} setEventArticle= {setEventArticle}/>
+                <EventCreateMain eventArticle={eventArticle} setEventArticle= {setEventArticle} onChange={onChange}/>
                 <EventCreateContent onChange={onChange} eventArticle={eventArticle}/>
             </div>
         )
