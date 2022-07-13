@@ -6,8 +6,12 @@ import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   //이벤트 둘러보기 클릭시 변경
-  const [eventTitle, seteventTitle] = useState(true);
+  const [eventTitle, setEventTitle] = useState(true);
 
+  const goToEventCreate = () => {
+    Navigate('/EventCreate')
+  }
+  
   const eventTitleChange = () =>{
     setEventTitle('이벤트 주최하기')
     goToEventCreate();
@@ -22,10 +26,10 @@ const Header = () => {
 
   useEffect(() => {
     if(location.pathname == "/Explore"){
-      seteventTitle(false)
+      setEventTitle(false)
       setcreateEventURL('/EventCreate')
     }else{
-      seteventTitle(true)
+      setEventTitle(true)
       setcreateEventURL('/Explore')
     }
   }, [ location.pathname ])
