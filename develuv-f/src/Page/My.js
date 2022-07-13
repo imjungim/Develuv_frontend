@@ -77,7 +77,7 @@ const My = () => {
     menu1: "내티켓",
     menu2: "주최한이벤트",
     menu3: "좋아요한이벤트",
-    menu4: "내티켓",
+    menu4: "프로필설정",
   };
 
   return (
