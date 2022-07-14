@@ -62,7 +62,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="signup">
+              <Link to="/login/signup">
                 <a href="/">회원가입</a>
               </Link>
             </li>
