@@ -1,0 +1,26 @@
+@import '../../App.scss';
+
+.eventAll {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 90px;
+}
+.eventAll button{
+  width: 200px;
+  height: 53px;
+  border: 0;
+  border-radius: 50px;
+  color: white;
+  background-color:$MainColor3 ;
+  font-size: 16px;
+
+  
+
+}
+
+.eventAll button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}

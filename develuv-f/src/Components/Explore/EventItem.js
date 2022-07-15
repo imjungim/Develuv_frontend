@@ -1,7 +1,20 @@
+//import axios from "axios";
 import "./EventItem.scss";
 import EventLike from "../EventInfo/EventLike";
+//import React, { useEffect, useState } from "react";
 
-const EventItem = ({ eventList, eventtype, eventdescript }) => {
+const EventItem = ({ eventList, eventtype, eventdescript, eventData }) => {
+  // const getEventData = () => {
+  //   axios.get('http://localhost:8081/Explore')
+  //   .then((response)=> {
+  //     setEventData (response.data);
+  //     console.log(setEventData)
+  //     // console.log(response.data);
+  //   })
+  //   .catch((Error)=>{console.log(Error)})
+  // }
+  // getEventData();
+
   return (
     <div id="event-board">
       <div className="new-event">
@@ -18,7 +31,8 @@ const EventItem = ({ eventList, eventtype, eventdescript }) => {
               </div>
               <div>
                 <div className="event-date">
-                  {it.date} {it.type}
+                  <div>{it.start_date} ~ {it.end_date}</div>
+                  <div>{it.online}</div>
                 </div>
                 <div>{it.title}</div>
               </div>
@@ -31,6 +45,7 @@ const EventItem = ({ eventList, eventtype, eventdescript }) => {
           </div>
         ))}
       </div>
+
     </div>
   );
 };

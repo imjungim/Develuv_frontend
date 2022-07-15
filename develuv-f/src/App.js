@@ -14,9 +14,10 @@ import EventListAll from "./Page/EventListAll";
 import Unregister from "./Page/Unregister";
 import AttendeePage from "./Components/Attendee/Attendee";
 import EventCreateContainer from "./Containers/EventCreateContainer";
-// import { createStore } from "redux";
-// import { Provider } from "react-redux";
-// import rootReducer from "./Modules/index";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import rootReducer from "./Modules/index";
+import Signup from "./Page/Signup";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         {/* url경로와 컴포넌트를 맵핑합니다. */}
         <Route path="/" element={<Mainpage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/login/signup" element={<Signup/>} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/eventInfo" element={<EventInfo />} />
 
