@@ -6,19 +6,17 @@ import Mainpage from "./Page/Mainpage";
 import Header from "./Components/Header";
 import Faq from "./Page/Faq";
 import Footer from "./Components/Footer";
-import LoginForm from "./Components/LoginForm";
 import Login from "./Page/Login";
 import Explore from "./Page/Explore";
 import EventInfo from "./Containers/EventInfoContainer";
-import Myprofile from "./Page/My";
 import My from "./Page/My";
 import EventListAll from "./Page/EventListAll";
 import Unregister from "./Page/Unregister";
 import AttendeePage from "./Components/Attendee/Attendee";
 import EventCreateContainer from "./Containers/EventCreateContainer";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-import rootReducer from "./Modules/index";
+// import { createStore } from "redux";
+// import { Provider } from "react-redux";
+// import rootReducer from "./Modules/index";
 
 const App = () => {
   return (

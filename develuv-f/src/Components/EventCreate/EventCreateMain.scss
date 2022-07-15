@@ -1,7 +1,6 @@
 #createMain{
     padding-top: 80px;
     padding-bottom: 200px;
-    overflow: auto;
     min-height: 100%;
     padding-left:100px;
     display:inline-block
@@ -24,7 +23,7 @@
     border-radius: 25px;
     width: 210px;
     height: 210px;
-    position: relative;
+    // position: relative;
     cursor: pointer;
 }
 
@@ -49,82 +48,29 @@
     width: 110px;
     height: 92px;
     background: url(./online.png) center center / cover no-repeat;
-    position: absolute;
+    // position: absolute;
     top: 49px;
     left: 49px;
     right: 49px;
-}
-
-.offlineImg{
-#createMain{
-    padding-top: 80px;
-    padding-bottom: 200px;
-    overflow: auto;
-    min-height: 100%;
-    padding-left:100px;
-    display:inline-block
-}
-
-.onoffTitle{
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
-    color: rgb(25, 25, 26);
-    margin-bottom: 74px;
-}
-
-.onoffBox{
-    background: rgb(255, 255, 255);
-    border: 1px solid rgb(196, 200, 204);
-    box-sizing: border-box;
-    border-radius: 25px;
-    width: 210px;
-    height: 210px;
-    position: relative;
-    cursor: pointer;
-}
-
-//박스 클릭 했을때
-.onoffClick{
-    border: 1px solid rgb(34, 83, 255);
-}
-
-.onoffArea{ 
-    display: flex;
-    // -webkit-box-pack: center;
-    // justify-content: center;
-    margin-bottom: 68px;
-
-}
-
-.onoffArea > * + * {
-    margin-left: 17px;
-}
-
-.onlineImg{
-    width: 110px;
-    height: 92px;
-    background: url(./online.png) center center / cover no-repeat;
-    position: absolute;
-    top: 49px;
-    left: 49px;
-    right: 49px;
+    margin-left:23%;
+    margin-right:25%;
+    margin-bottom:16px;
 }
 
 .offlineImg{
     width: 140px;
     height: 80px;
     background: url(./offline.png) center center / cover no-repeat;
-    position: absolute;
+    // position: absolute;
     top: 49px;
     left: 33px;
     right: 36px;
+    margin-left:13%;
+    margin-bottom:23px;
 }
 
 .onoffText{
-    position: absolute;
+    // position: absolute;
     bottom: 26px;
     left: 0px;
     right: 0px;
@@ -190,4 +136,4 @@
     font-size: 14px;
     line-height: 20px;
     color: rgb(118, 120, 122);
-}}
+}

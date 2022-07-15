@@ -33,9 +33,38 @@ const Explore = () => {
       type: "온라인",
       title: "Node Js KOSTA",
     },
+    {
+      id: 5,
+      image: "이미지영역",
+      date: "2022-07-11(월)",
+      type: "온라인",
+      title: "Node Js KOSTA",
+    },
+    {
+      id: 6,
+      image: "이미지영역",
+      date: "2022-07-11(월)",
+      type: "온라인",
+      title: "Node Js KOSTA",
+    },
+    {
+      id: 7,
+      image: "이미지영역",
+      date: "2022-07-11(월)",
+      type: "온라인",
+      title: "Node Js KOSTA",
+    },
+    {
+      id: 7,
+      image: "이미지영역",
+      date: "2022-07-11(월)",
+      type: "온라인",
+      title: "Node Js KOSTA",
+    },
+
   ];
 
-  const eventItem = [
+  const eventmenu = [
     {
       title: "최신이벤트",
       description: "최신으로 등록된 이벤트를 만나보세요",
@@ -49,6 +78,11 @@ const Explore = () => {
       description : "신청이 곧 마감되는 이벤트들입니다.",
     }
   ];
+  // const getEventData = () => {
+  //   Axios.get().then((response)=> {
+  //     setViewData(response.data);
+  //   })
+  // }
 
   return (
     <div>
