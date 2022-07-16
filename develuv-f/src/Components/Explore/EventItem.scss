@@ -9,22 +9,27 @@
 
 .event-board {
   min-width: 100%;
-  display: flex;
-  justify-content: center;
- 
+  // display: flex;
+  // justify-content: center;
  
 }
 
 .new-event{
-  width: 1150px;
-  margin: 50px auto 50px auto
+  width: 1320px;
+  margin: 50px auto;
+  padding-left: 30px;
+}
+
+.new-event h3{
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .eventList-tabs{
-  width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+//  width: 1200px;
+ // display: flex;
+  // align-items: center;
+  // justify-content: center;
   // flex-direction: row;
   margin: auto;
   font-size: 12px;
@@ -33,7 +38,7 @@
 }
 
 .event-box{
-  width: 250px;
+  width: 280px;
   height: 350px;
   display: flex;
   justify-content: center;
