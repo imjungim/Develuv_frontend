@@ -14,7 +14,7 @@ const EventItem = ({ eventList, eventtype, eventdescript, eventData }) => {
         <div className="new-event">
           <h3>{eventtype}</h3>
           <div>{eventdescript}</div>
-        </div>
+        </div> 
         {eventList.map((it) => (
           <Col className="item" lg="3" md="6">
             <div className="eventList-tabs">
@@ -26,7 +26,8 @@ const EventItem = ({ eventList, eventtype, eventdescript, eventData }) => {
                   <div>
                     <div className="event-date">
                       <div>
-                        {it.start_date} ~ {it.end_date}
+                        <div>{it.start_date} ~ </div>
+                        <div>{it.end_date}</div>
                       </div>
                       <div>{it.online}</div>
                     </div>
