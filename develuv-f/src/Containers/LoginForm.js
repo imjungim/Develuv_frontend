@@ -175,13 +175,13 @@ const LoginForm = (props) => {
                 />
                 <p>Password</p>
                 <input
-                  // type="password"
+                  type="password"
                   onChange={stateFunction.pwState}
                   placeholder="password"
                 />
                 <p>2nd Password</p>
                 <input
-                  // type="password"
+                  type="password"
                   onChange={stateFunction.rePwState}
                   placeholder="2nd password"
                 />
