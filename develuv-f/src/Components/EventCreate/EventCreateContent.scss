@@ -46,7 +46,7 @@
     resize: none
 }
 #eventText{
-    padding-top:50px;
+    padding-top:20px;
 }
 
 #uploadIMG{
@@ -65,8 +65,11 @@
     width: 450px;
     height: 253px;
     text-align: center;
-    padding-top: 73px;
-    
+    padding-top: 73px;    
+    background-size: cover
+}
+#inputIMG{
+    margin-top:10px;
 }
 
 
