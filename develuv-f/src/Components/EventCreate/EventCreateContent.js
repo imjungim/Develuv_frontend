@@ -1,7 +1,24 @@
 import React from "react";
 import './EventCreateContent.scss'
+import { useState } from 'react';
 
-const EventCreateContent = ({ eventArticle, onChange }) => {
+const EventCreateContent = ({ eventArticle, onChange,setEventArticle,onClick }) => {
+    const [imageSrc, setImageSrc] = useState('');
+
+    const encodeFileToBase64 = (fileBlob) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(fileBlob);
+        return new Promise((resolve) => {
+            reader.onload = () => {
+                setImageSrc(reader.result)
+                setEventArticle({
+                    ...eventArticle,
+                    titleImg:reader.result
+                });
+                resolve();
+            };
+        });
+    };
     return (
         <div id="createContent" >
             <div id="eventTitle">
@@ -13,12 +30,13 @@ const EventCreateContent = ({ eventArticle, onChange }) => {
                 <input name="eventTime" className="createInput" placeholder="이벤트 기간" value={eventArticle.eventTime} onChange={onChange} />
                 <div id="uploadIMG">
                     <div className="createTitle">커버 이미지</div>
-                    <div id="uploadBox"></div>
+                    <div id="uploadBox" style={{ backgroundImage: `url(${imageSrc})`}} > </div>
                     <input
-                        id="uploadImg"
+                        id="inputIMG"
                         type="file"
                         accept='image/*'
-                        name="uploadImg"
+                        name="titleImg"
+                        onChange={(e) => { encodeFileToBase64(e.target.files[0]) }}
                     />
                 </div>
 
@@ -27,7 +45,7 @@ const EventCreateContent = ({ eventArticle, onChange }) => {
                 <textarea name="eventText" id="createText" placeholder="이벤트 내용" value={eventArticle.event} onChange={onChange} />
             </div>
 
-            <a className="reg" href="/" > 이벤트 주최하기 </a>
+            <a className="reg" href="javascript:return false;" onClick={onClick} > 이벤트 주최하기 </a>
 
 
 
@@ -39,3 +57,4 @@ const EventCreateContent = ({ eventArticle, onChange }) => {
 }
 
 export default EventCreateContent
+
