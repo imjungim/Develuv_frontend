@@ -229,8 +229,9 @@ const Events = () => {
                       <div>{it.start_date} ~ </div>
                       <div>{it.end_date}</div>
                       <div>{it.online}</div>
+                      <div>{it.title}</div>
                     </div>
-                    <div>{it.title}</div>
+                    
                   </div>
                 </a>
               </div>

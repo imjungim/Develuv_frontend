@@ -7,14 +7,14 @@ import EventLike from "../EventInfo/EventLike";
 
 //import React, { useEffect, useState } from "react";
 
-const EventItem = ({ eventList, eventtype, eventdescript, eventData }) => {
+const EventItem = ({ eventList, eventmenu, eventdescript, eventData }) => {
   return (
     <Container>
       <Row>
         <div className="new-event">
-          <h3>{eventtype}</h3>
+          <h3>{eventmenu}</h3>
           <div>{eventdescript}</div>
-        </div> 
+        </div>
         {eventList.map((it) => (
           <Col className="item" lg="3" md="6">
             <div className="eventList-tabs">
@@ -30,8 +30,9 @@ const EventItem = ({ eventList, eventtype, eventdescript, eventData }) => {
                         <div>{it.end_date}</div>
                       </div>
                       <div>{it.online}</div>
+                      <div>{it.title}</div>
                     </div>
-                    <div>{it.title}</div>
+                    
                   </div>
                 </a>
                 <div className="like-button">

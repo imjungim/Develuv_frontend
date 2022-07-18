@@ -1,14 +1,19 @@
 import React,{useState, useRef} from "react";
+import { useSearchParams ,useNavigate} from "react-router-dom";
+
 
 import "./EventSearch.scss";
 
 const EventSearch = () => {
+
+
+  const navigate = useNavigate();
   const textInput = useRef();
   const [state, setState] = useState({
     text : "",
     type : "전체",
   });
-  console.log(state);
+ // console.log(state);
 
   const changeState = (e) => {
     setState({
@@ -17,6 +22,17 @@ const EventSearch = () => {
     });
   }
 
+  const getSearch = () => {
+    // setSearchParams({
+    //   keyword : state.text,
+    //   type : state.type,
+    // })
+    
+    navigate(`/search?keyword=${state.text}&type=${state.type}`)
+  }
+  
+  
+
   const handleSubmit = () =>{
     if(state.text.length <1 ){
       //focus
@@ -24,6 +40,7 @@ const EventSearch = () => {
       return;
     }
 
+    getSearch();
     setState({
       text : "",
       type : "전체",
@@ -70,6 +87,7 @@ const EventSearch = () => {
             type="submit"
             onClick={handleSubmit}
             >검색</button>
+
           </div>
         </div>
       </section>
