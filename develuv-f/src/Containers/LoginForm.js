@@ -101,35 +101,52 @@ const LoginForm = (props) => {
 
   if (isSignUpPage) {
 
-    const validation = (name, pw, rePw) => {
-      
-      if(name === '') {
-        alert('이름이 빈 칸 입니다.')
+    const SignupSubmit = (e) => {
+      e.preventDefault();
+
+      let check = false;
+
+      if(email === '') {
+        alert('이메일이 빈 칸 입니다.');
+        check = true;
+      }
+
+      if(nickname === '') {
+        alert('이름이 빈 칸 입니다.');
+        check = true;
       }
 
       if(pw === '') {
-        alert('비밀번호가 빈 칸 입니다.')
+        alert('비밀번호가 빈 칸 입니다.');
+        check = true;
       }
       
-      if(pw !== rePw) {
-        alert('비밀번호가 일치하지 않습니다.')
+      if(pw.pw !== rePw.rePw) {
+        alert('비밀번호가 일치하지 않습니다.');
+        check = true;
       }
-    }
 
-    const SignupSubmit = (e) => {
-      e.preventDefault();
-      validation(pw, rePw);
-      axios.post('/login/signup/post', {
-        email: email,
-        pw: pw,
-        nickname: nickname
-      }).then((res) => {
-        <Link to="login"/>
-        console.log(res);
-        alert('회원가입 완료!');
-      }).catch((err) => {
-        console.log(err)
-      })
+      console.log(pw.pw);
+      console.log(rePw.rePw)
+
+      if (check === false) {
+        axios.post('/login/signup/post', {
+          email: email,
+          pw: pw,
+          nickname: nickname
+        }).then((res) => {
+          <Link to="login"/>
+          console.log(res);
+          alert('회원가입 완료!');
+        }).catch((err) => {
+          console.log(err)
+        })
+      } else {
+        return (
+        alert('회원가입에 실패하셨습니다.')
+        )
+      }
+
     }
 
     return (
