@@ -14,7 +14,7 @@ const EventCreateContainer = ()=>{
         content:"",
         ticket:null,
         img:"",
-        address: undefined
+        address: ""
     });
     const onChange = e => {
         const { name, value } = e.target;
@@ -31,7 +31,6 @@ const EventCreateContainer = ()=>{
                 break;
             }
         }
-
         if(true){
         try {
             await axios.post('http://localhost:8081/EventCreate',
