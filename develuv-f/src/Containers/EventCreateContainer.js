@@ -3,16 +3,18 @@ import EventCreateMain from '../Components/EventCreate/EventCreateMain';
 import { useState } from 'react';
 import EventCreateContent from '../Components/EventCreate/EventCreateContent'
 import './EventCreateContainer.scss'
+import axios from 'axios'
 const EventCreateContainer = ()=>{
-    
+    const [nullCheck,setnullCheck] = useState(false)
     const [eventArticle, setEventArticle] = useState({
         onoff: null,
         type: null,
-        eventTitle: "",
-        eventTime: "",
-        eventText:"",
-        eventMax:0,
-        titleImg:""
+        title: "",
+        end_date: "",
+        content:"",
+        ticket:null,
+        img:"",
+        address: undefined
     });
     const onChange = e => {
         const { name, value } = e.target;
@@ -21,8 +23,26 @@ const EventCreateContainer = ()=>{
             [name]: value
         });
     };
-    const onClick = ()=>{
-        console.log(eventArticle)
+    const onClick = async ()=>{
+        // 빈값 체크
+        for(const i in eventArticle){
+            if(eventArticle[i] !== null || eventArticle[i] !== ""){
+                setnullCheck(true)
+                break;
+            }
+        }
+
+        if(true){
+        try {
+            await axios.post('http://localhost:8081/EventCreate',
+                eventArticle
+            )
+         } catch (err){
+            console.log(err)
+         }
+        }else{
+            alert('빈칸을 모두 입력하세요')
+        }
     }
 
         return(

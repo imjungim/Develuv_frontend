@@ -39,7 +39,6 @@ const EventItem = ({ eventList, eventtype, eventdescript, eventData }) => {
             </a>
 
             <div className="like-button">
-              {" "}
               <EventLike />
             </div>
           </div>
