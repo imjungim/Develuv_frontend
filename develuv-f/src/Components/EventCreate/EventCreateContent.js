@@ -11,6 +11,7 @@ const EventCreateContent = ({ eventArticle, onChange,setEventArticle,onClick }) 
         return new Promise((resolve) => {
             reader.onload = () => {
                 setImageSrc(reader.result)
+                console.log(reader)
                 setEventArticle({
                     ...eventArticle,
                     img:reader.result

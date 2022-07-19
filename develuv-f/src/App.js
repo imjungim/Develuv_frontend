@@ -32,7 +32,6 @@ const App = () => {
         <Route path="/login/signup" element={<Signup/>} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/eventInfo/:id" element={<EventInfo />} />
-
         <Route path="/explore/all" element={<EventListAll />} />
 
         {/* 이벤트 생성 컨테이너 */}

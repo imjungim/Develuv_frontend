@@ -4,26 +4,28 @@ import './EventInfoTitle.scss'
 import EventLike from './EventLike'
 import img from './test.png'
 export default function EventInfoTitle({ post }) {
+    const { board_key, user_id, title, img, email, content, start_date, end_date,
+        ticket, onoff, address, club_status, type } = post
+
+    
     return (
         <div className="EventInfoTitle">
-            <img className="img" src={img} />
+            <div className="imgBox" style={{ backgroundImage: `url(${img})` }} />
             <div className="title">
-
-                <h1>{post.제목}</h1>
-                <h2>{post.태그}</h2>
+                <h1>{title}</h1>
+                {start_date}
                 <div className="titleLi">
                     일시
                 </div>
                 <div className="timeData">
-                    {post.주최날짜}
-                    <br />
-                    {post.주최시간}
+                    {end_date}
                 </div>
                 <div className="titleLi">
                     주최
                 </div>
                 <div>
-                    {post.주최자}
+                    {user_id}
+                    {email}
                 </div>
                 <div>
                     <EventLike />
@@ -31,10 +33,10 @@ export default function EventInfoTitle({ post }) {
             </div>
             <div className="buyTicket">
                 <div className="icons">
-                    <span><IoIosPeople size="20px" /></span>
-                    <span>{post.현재참가인원}명</span>
+                    {/* <span><IoIosPeople size="20px" /></span>
+                    <span>{post.현재참가인원}명</span> */}
                 </div>
-                <a className = "reg" href="/">등록</a>
+                <a className="reg" href="/">등록</a>
             </div>
         </div>
     )
