@@ -2,6 +2,7 @@ import React,{useState, useRef} from "react";
 import { useSearchParams ,useNavigate} from "react-router-dom";
 
 
+
 import "./EventSearch.scss";
 
 const EventSearch = () => {
@@ -11,7 +12,7 @@ const EventSearch = () => {
   const textInput = useRef();
   const [state, setState] = useState({
     text : "",
-    type : "전체",
+    type : "2",
   });
  // console.log(state);
 
@@ -22,17 +23,10 @@ const EventSearch = () => {
     });
   }
 
-  const getSearch = () => {
-    // setSearchParams({
-    //   keyword : state.text,
-    //   type : state.type,
-    // })
-    
+  const getSearch = () => {    
     navigate(`/search?keyword=${state.text}&type=${state.type}`)
   }
   
-  
-
   const handleSubmit = () =>{
     if(state.text.length <1 ){
       //focus
@@ -43,7 +37,7 @@ const EventSearch = () => {
     getSearch();
     setState({
       text : "",
-      type : "전체",
+      type : "2",
     })
   }
 
@@ -52,9 +46,7 @@ const EventSearch = () => {
 
   return (
     <div className="EventList">
-      <div className="banner">
-        <img src={process.env.PUBLIC_URL + "/eventItem_banner.png"} />
-      </div>
+
       <section className="searchbar">
         <div className="search-tabs">
           <div className="search-name">
@@ -77,9 +69,10 @@ const EventSearch = () => {
               className="select-event-type" 
               onChange={changeState}>
               
-              <option value={'전체'}>전체</option>
-              <option value={'온라인'}>온라인</option>
-              <option value={'오프라인'}>오프라인</option>
+              <option value={2}>전체</option>
+              <option value={0}>온라인</option>
+              <option value={1}>오프라인</option>
+              
             </select>
           </div>
           <div className="search-button">

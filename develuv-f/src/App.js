@@ -37,7 +37,7 @@ const App = () => {
 
         <Route path="/events" element={<Events/>} /> 
         <Route path="/events/:id" element={<EventInfo />} /> {/*이벤트 상세페이지 */}
-        <Route path="/search" element={<SearchKeyword/>} /> {/*이벤트 검색결과 페이지 */}
+        <Route path="/search" element={<SearchKeyword/>} /> 이벤트 검색결과 페이지
 
 
         {/* 이벤트 생성 컨테이너 */}
