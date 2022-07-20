@@ -76,6 +76,8 @@ const EventItem = ({ eventList, eventmenu, eventdescript, eventData}) => {
 
   const sliceData = eventData.slice(0, 4);
   console.log("sliceData : ", sliceData);
+
+
   return (
     <Container>
       <div className="new-event">
@@ -98,7 +100,7 @@ const EventItem = ({ eventList, eventmenu, eventdescript, eventData}) => {
                         <div>{it.start_date} ~ </div>
                         <div>{it.end_date}</div>
                       </div>
-                      <div className="event-onoff">{it.onoff === 0 ? "온라인" : "오프라인"}</div>
+                      <div className="event-onoff">{it.onoff === 1 ? "온라인" : "오프라인"}</div>
                     </div>
                     <EventLike />
                   </div>

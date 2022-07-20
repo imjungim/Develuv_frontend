@@ -82,9 +82,12 @@
 
 }
 
-.event-img:hover img{
-  opacity: 0.5;
+// .event-img:hover img{
+//   opacity: 0.5;
 
+// }
+.event-box a:hover {
+  opacity: 0.5;
 }
 .event-date{
   margin-bottom: 5px;

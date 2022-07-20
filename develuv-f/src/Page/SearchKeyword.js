@@ -35,7 +35,10 @@ const SearchKeyword = () => {
   return (
     <div>
     <EventSearch/>
-    <Searchboard searchData={searchData}/>  
+    {searchData.length === 0 ?   
+      <div>🤔검색결과가 없습니다.</div>
+    : 
+    <Searchboard searchData={searchData}/>  }
     </div>
   )
 };

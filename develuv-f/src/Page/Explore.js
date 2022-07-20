@@ -56,9 +56,10 @@ const Explore = () => {
 
   //최신이벤트filter
   const getLatestevent = (a,b) => {
-    const eventA =new Date(a['start_date']).getTime();
-    const eventB =new Date(b['start_date']).getTime();
-    return eventA > eventB ? 1 : -1;
+    // const eventA =new Date(a['start_date']).getTime();
+    // const eventB =new Date(b['start_date']).getTime();
+    // return eventA < eventB ? 1 : -1;
+    return (b.start_date) - (a.start_date)
   };
 
   const latestEvent = eventData.sort(getLatestevent);

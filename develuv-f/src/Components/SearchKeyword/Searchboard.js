@@ -8,7 +8,9 @@ import Col from "react-bootstrap/Col";
 const Searchboard = ({searchData}) => {
 
   return (
+
     <Container>
+  
       <div className="new-event">
         <h3>이벤트 검색결과</h3>
         <div>develuv이벤트 검색결과입니다.</div>
@@ -40,6 +42,7 @@ const Searchboard = ({searchData}) => {
           </Col>
         ))}
       </Row>
+      
     </Container>
   );
 };
