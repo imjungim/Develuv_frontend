@@ -61,16 +61,14 @@ const LoginForm = (props) => {
 
       axios
         .post("login/post", {
-          email: email,
-          pw: pw,
+          email: email.email,
+          pw: pw.pw,
         })
         .then((res) => {
           console.log('tt');
-          alert("와 이걸");
         })
         .catch((err) => {
           console.log(err);
-          alert("아니 원하는거 다 해줬는데도 왜 이 옘병꼴깝을 떠는거니?");
         });
     };
 
