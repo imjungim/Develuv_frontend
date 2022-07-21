@@ -62,7 +62,7 @@ const My = () => {
       case "/unregister":
         return <Unregister />;
       default:
-        return <MyTicket />;
+        return <MyTicket />; //default
     }
   };
   //url 변경 props

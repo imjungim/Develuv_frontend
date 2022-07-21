@@ -11,10 +11,10 @@ import ScrollToTop from "./Components/ScrollTOtop";
 const store = createStore(rootReducer);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <HashRouter>
+  <BrowserRouter>
     <Provider store={store}>
       <ScrollToTop />
       <App />
     </Provider>
-  </HashRouter>
+  </BrowserRouter>
 );

@@ -65,7 +65,12 @@ const EventCreateMain = ({ eventArticle, setEventArticle,onChange }) => {
                
             <div className="eventMax">
                 <div className="createTitle">이벤트 최대 인원</div>
-                <input name="eventMax" className="createInput" placeholder="이벤트 최대인원" value={eventArticle.eventMax} onChange={onChange} />
+                <input name="ticket" className="createInput" placeholder="이벤트 최대인원" value={eventArticle.ticket} onChange={onChange} />
+            </div>
+
+            <div className="eventAddress" style = {{display : `${eventArticle.onoff ? 'inline' : 'none'}`}}>
+                <div className="createTitle">이벤트 주소</div>
+                <input name="address" className="createInput" placeholder="이벤트 주소" value={eventArticle.address} onChange={onChange} />
             </div>
         </div >
     )

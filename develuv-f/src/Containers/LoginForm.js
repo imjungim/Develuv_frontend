@@ -1,3 +1,4 @@
+
 import axios from "axios";
 import { useState } from "react";
 import { Link, Router } from "react-router-dom";
@@ -158,7 +159,7 @@ const LoginForm = (props) => {
           .post("/login/signup/post", {
             email: email,
             pw: pw,
-            nickname: nickname,
+            nickname: nickname,               
           })
           .then((res) => {
             console.log(res);

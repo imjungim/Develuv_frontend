@@ -8,7 +8,7 @@ const EventLike = () => {
   // const change = () => {
   //     likeCheck ? setCheck(false) : setCheck(true)
   // }
-
+  
   const toggle = () => {
     document.getElementById("like-button").classList.toggle("selected");
   };

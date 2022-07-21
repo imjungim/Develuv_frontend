@@ -1,19 +1,16 @@
 @import '../../App.scss';
-
 #kakaoBtn {
   background-color: $KakaoColor1;
   color: $KakaoColor2;
 }
-
 .Login{
   width: 100%;
   height: 100vh;
-  background-color: #f8f9fa;
+  background-color: #F8F9FA;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-
 .LoginForm {
   width: 500px;
   height: 700px;
@@ -26,7 +23,6 @@
   background-color: #fff;
   box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.025);
 }
-
 .logintab{
   flex-direction: row;;
   display: flex;
@@ -34,27 +30,22 @@
   align-items: center;
   margin: 10% 15% 10% 15%;
 }
-
 .inputWrap {
-  margin: 0% 0% 15% 0%;
+  margin: 0% auto 15% auto;
 }
-
 .loginBtn {
-  width: 75%;
+  width: 50%;
 }
-
 .flexCenter {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .LoginForm h2 {
   margin: 15px 8px 15px 8px;
   font-weight: 700px;
   font-size: 1.8rem;
-
 }
 .input-group input{
   margin-bottom: 10px;
@@ -66,44 +57,37 @@
   margin-right: 4px;
   font-size: 14px;
   font-family: "Nunito Sans", sans-serif;
-  background-color: #f6f8fa;
-  color: #333e47;
+  background-color: #F6F8FA;
+  color: #333E47;
 }
-
 .input-group p{
   font-weight: 500;
   font-size: 1rem;
   margin-top : 2px;
   margin-bottom: 5px;
 }
-
 .loginform-logo{
   border-radius: 100%;
   width: 50px;
   height: 50px;
   margin: auto;
 }
-
 .input-group {
   display: flex;
   flex-direction: column;
   margin: auto;
 }
-
 .input-group input::placeholder {
-  color: #b6bec8;
+  color: #B6BEC8;
 }
-
 .input-group input:focus,
 .input-group button:focus {
   box-shadow: none;
   outline: none;
 }
-
 .input-group button:hover{
   opacity: 0.8;
 }
-
 .input-group button {
   height: 40px;
   padding: 0 12px;
@@ -117,11 +101,9 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
 .input-group img {
   height: 40px;
 }
-
 form a {
   text-align: center;
   margin-bottom: 6%;

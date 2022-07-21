@@ -1,11 +1,6 @@
 @import '../../App.scss';
 //EventItem
 
-* {
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Noto Sans KR', sans-serif;
-}
 
 .event-board {
   min-width: 100%;
@@ -26,15 +21,10 @@
 }
 
 .eventList-tabs{
-//  width: 1200px;
- // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // flex-direction: row;
   margin: auto;
   font-size: 12px;
   flex-wrap: wrap;
-  // margin-bottom: 50px;
+
 }
 
 .event-box{
@@ -44,11 +34,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 5px;
   margin: 0 auto;
-  // margin-right: 50px;
   margin-bottom: 50px;
 }
 
@@ -82,18 +70,14 @@
 
 }
 
-// .event-img:hover img{
-//   opacity: 0.5;
-
-// }
 .event-box a:hover {
   opacity: 0.5;
 }
+
 .event-date{
   margin-bottom: 5px;
   width: 230px;
   padding-bottom: 2px;
-
 }
 
 .like-button{
@@ -111,6 +95,5 @@
   border-radius: 7px;
   border: 0.5px solid gray ;
   font-size: 10px;
-
   text-align: center;
 }

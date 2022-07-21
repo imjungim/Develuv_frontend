@@ -43,7 +43,7 @@ const Explore = () => {
       description: "신청이 곧 마감되는 이벤트들입니다.",
     },
   ];
-  const dummyEventList = [
+  const dummyeventData = [
     {
       board_key: 1,
       user_id: 1,
@@ -63,7 +63,7 @@ const Explore = () => {
     {
       board_key: 2,
       user_id: 2,
-      title: "이벤트제목입니다.",
+      title: "테스트지롱",
       img: "이미지파일",
       email: "kosta@gamil.com",
       content: "아무말이나 일단 적습니다.",
@@ -114,7 +114,7 @@ const Explore = () => {
     {
       board_key: 4,
       user_id: 4,
-      title: "제목4",
+      title: "제목은 무엇",
       img: "image",
       email: "kosta@gamil.com",
       content: "test",
@@ -131,7 +131,7 @@ const Explore = () => {
     {
       board_key: 4,
       user_id: 4,
-      title: "제목4",
+      title: "검색테스트",
       img: "image",
       email: "kosta@gamil.com",
       content: "test",
@@ -148,7 +148,7 @@ const Explore = () => {
     {
       board_key: 4,
       user_id: 4,
-      title: "제목4",
+      title: "첫번째 이벤트",
       img: "image",
       email: "kosta@gamil.com",
       content: "test",
@@ -165,7 +165,7 @@ const Explore = () => {
     {
       board_key: 4,
       user_id: 4,
-      title: "제목4",
+      title: "세번째",
       img: "image",
       email: "kosta@gamil.com",
       content: "test",
@@ -187,7 +187,7 @@ const Explore = () => {
     return eventA < eventB ? 1 : -1;
   };
 
-  const latestEvent = dummyEventList.sort(getLatestevent);
+  const latestEvent = dummyeventData.sort(getLatestevent);
    console.log("latest : ", latestEvent);
 
   //최신이벤트filter
@@ -202,7 +202,7 @@ const Explore = () => {
 
 
   //eventData 온라인인경우 filter
-  const onlinefilter = eventData.filter(it=>it.onoff === 1);
+  const onlinefilter = dummyeventData.filter(it=>it.onoff === 1);
  // console.log("res : " , onlinefilter)
 
   //eventData 마감임박인 경우 filter
@@ -212,7 +212,7 @@ const Explore = () => {
     return eventC < eventD ? 1 : -1;
   };
 
-  const oldEvent = dummyEventList.sort(getOldEvent);
+  const oldEvent = dummyeventData.sort(getOldEvent);
   console.log("oldEvent : ", oldEvent);
 
   return (
@@ -222,17 +222,17 @@ const Explore = () => {
       <EventItem
         eventmenu={eventmenu[0].title}
         eventdescript={eventmenu[0].description}
-        eventData={latestEvent}
+        dummyeventData={latestEvent}
       />
       <EventItem
         eventmenu={eventmenu[1].title}
         eventdescript={eventmenu[1].description}
-        eventData={onlinefilter}
+        dummyeventData={onlinefilter}
       />
       <EventItem
         eventmenu={eventmenu[2].title}
         eventdescript={eventmenu[2].description}
-        eventData={oldEvent}
+        dummyeventData={oldEvent}
       />
       <EventAllbutton />
     </div>

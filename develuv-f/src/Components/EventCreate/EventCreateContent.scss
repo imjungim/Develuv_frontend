@@ -13,7 +13,7 @@
     color: rgb(25, 25, 26);
     display: flex;
     margin-bottom: 12px;
-    padding-top:30px;
+    padding-top:20px;
 }
 
 .createInput{
@@ -46,6 +46,30 @@
     resize: none
 }
 #eventText{
-    padding-top:50px;
+    padding-top:20px;
 }
+
+#uploadIMG{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgb(25, 25, 26);
+}
+
+#uploadBox{
+    background: rgb(235, 237, 240);
+    border: 1px dashed rgb(144, 148, 153);
+    box-sizing: border-box;
+    border-radius: 10px;
+    width: 450px;
+    height: 253px;
+    text-align: center;
+    padding-top: 73px;    
+    background-size: cover
+}
+#inputIMG{
+    margin-top:10px;
+}
+
 

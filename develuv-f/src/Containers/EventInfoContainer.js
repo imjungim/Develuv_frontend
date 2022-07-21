@@ -1,36 +1,41 @@
 import './EventInfo.scss'
-import { useState} from 'react'
+import { useState } from 'react'
 import EventInfoTitle from '../Components/EventInfo/EventInfoTitle'
 import EventInfoMain from '../Components/EventInfo/EventInfoMain'
 import EventComments from '../Components/EventInfo/EventComment'
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {addComment} from '../Modules/Comment';
+import { addComment } from '../Modules/Comment';
+import { useParams } from 'react-router-dom'
+import axios from 'axios'
 
-export default function EventInfo() {
-
+const EventInfo = ()=> {
+    const id = useParams().id
+    const infoData = {};
+    useEffect(() => {
+        axios.get(`http://localhost:8081/EventInfo/${id}`)
+            .then((response) => { 
+               setPost(response.data[0])
+            })
+            .catch((err) => { console.log(err) })
+    }, [])
     const [post, setPost] = useState(
         {
-            제목: "KOSTA 노드반",
-            태그: ["fullstack",
-                "javascript",
-                "취업 1000%"],
-            주최날짜: "2022년 07월 28일",
-            주최시간: "오후 01:00 - 오후 06:00",
-            주최자: "이창현",
-            현재참가인원: 0,
+            ...infoData
         })
-        
-        const comments = useSelector(store => store.CommentReducer);
-        const dispatch = useDispatch();
-        const onCreate = text => dispatch(addComment(text));
-        
-      
+
+        console.log(post)
+    const comments = useSelector(store => store.CommentReducer);
+    const dispatch = useDispatch();
+    const onCreate = text => dispatch(addComment(text));
+
+
     return (
         <div className="EventInfo">
             <EventInfoTitle post={post} />
-            <EventInfoMain />
+            <EventInfoMain post ={post}/>
             <EventComments comments={comments} onCreate={onCreate} />
         </div>
     )
 }
+export default EventInfo;
