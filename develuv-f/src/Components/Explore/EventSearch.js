@@ -1,8 +1,5 @@
 import React,{useState, useRef} from "react";
 import { useSearchParams ,useNavigate} from "react-router-dom";
-
-
-
 import "./EventSearch.scss";
 
 const EventSearch = () => {
@@ -25,6 +22,17 @@ const EventSearch = () => {
 
   const getSearch = () => {    
     navigate(`/search?keyword=${state.text}&type=${state.type}`)
+  }
+
+  const handleKeyPress = e => {
+    if(e.key === 'Enter') {
+ 
+      getSearch();
+      setState({
+        text : "",
+        type : "2",
+      })
+    }
   }
   
   const handleSubmit = () =>{
@@ -57,6 +65,7 @@ const EventSearch = () => {
                 name="text" 
                 onChange={changeState}
                 value={state.text}
+                onKeyPress={handleKeyPress}
                 placeholder="이벤트제목을 입력하세요"
               />
             </form>
@@ -68,7 +77,6 @@ const EventSearch = () => {
               value={state.type} 
               className="select-event-type" 
               onChange={changeState}>
-              
               <option value={2}>전체</option>
               <option value={0}>온라인</option>
               <option value={1}>오프라인</option>

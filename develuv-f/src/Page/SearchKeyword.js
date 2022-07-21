@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 //import "../Components/Explore/Events.scss";
 import Searchboard from "../Components/SearchKeyword/Searchboard"
 import EventSearch from "../Components/Explore/EventSearch";
+import Notfound from "../Components/SearchKeyword/Notfound";
 
 
 const SearchKeyword = () => {
@@ -36,7 +37,7 @@ const SearchKeyword = () => {
     <div>
     <EventSearch/>
     {searchData.length === 0 ?   
-      <div>🤔검색결과가 없습니다.</div>
+    <Notfound/>
     : 
     <Searchboard searchData={searchData}/>  }
     </div>

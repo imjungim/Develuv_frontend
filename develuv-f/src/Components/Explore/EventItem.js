@@ -78,6 +78,7 @@ const EventItem = ({ eventList, eventmenu, eventdescript, eventData}) => {
   console.log("sliceData : ", sliceData);
 
 
+
   return (
     <Container>
       <div className="new-event">
