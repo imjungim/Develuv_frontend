@@ -77,3 +77,25 @@ const EventCreateMain = ({ eventArticle, setEventArticle,onChange }) => {
 }
 
 export default EventCreateMain
+
+
+// {isSelected ? // 시작 시간을 선택해야 종료 시간 선택 가능
+// <div><SDatePicker
+
+
+
+// minTime={startTime}
+// maxTime={setHours(setMinutes(new Date(), getMinutes(startTime)), getHours(startTime)+2)} // 시작 시간부터 2시간
+// excludeTimes={[
+//     // 시작 시간 제외
+//     startTime,
+//     // 5:00 선택 기준 최대 7:00까지 예외처리
+//     setHours(setMinutes(new Date(), 0), 18),
+//     setHours(setMinutes(new Date(), 30), 18),
+//     setHours(setMinutes(new Date(), 0), 19)
+// ]}
+
+// /></div>
+
+// : null 
+// }

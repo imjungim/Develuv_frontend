@@ -13,6 +13,7 @@ const EventCreateContainer = () => {
         title: "",
         onoff: null,
         type: null,
+        start_date:"",
         end_date: "",
         content: "",
         ticket: null,
@@ -29,7 +30,7 @@ const EventCreateContainer = () => {
     const urlMove = () => { window.location.href = '/' }
 
     const onClick = async () => {
-
+     
         try {
             await axios.post('http://localhost:8081/EventCreate',
                 eventArticle,

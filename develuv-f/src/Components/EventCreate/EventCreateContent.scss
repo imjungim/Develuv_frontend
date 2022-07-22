@@ -71,5 +71,22 @@
 #inputIMG{
     margin-top:10px;
 }
+.calendar{
+    box-sizing: border-box;
+    font-size : 12px;
+    border-radius: 8px;
+    padding: 9px 14px;
+    height: 47px;
+    width: 250px;
+    background-color: white;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0px 10px;;
+    
+}
 
-
+.dateBox{
+    display:flex;
+    width: 550px;
+}
