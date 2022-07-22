@@ -44,6 +44,11 @@
 
 
 
+ .faq{
+  width: 100%;
+  height: 80vh;
+ }
+ 
  .faq-Q h3 {
   font-size: 0.9rem;
  }
@@ -54,4 +59,8 @@
 
  .faq p {
   margin-left: 15px;
+ }
+
+ .faq-title  {
+  margin-top: 10px;
  }

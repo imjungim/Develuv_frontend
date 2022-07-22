@@ -34,11 +34,9 @@ const App = () => {
         <Route path="/login/signup" element={<Signup/>} />
         <Route path="/explore" element={<Explore />} />
         
-
         <Route path="/events" element={<Events/>} /> 
         <Route path="/events/:id" element={<EventInfo />} /> {/*이벤트 상세페이지 */}
         <Route path="/search" element={<SearchKeyword/>} /> 이벤트 검색결과 페이지
-
 
         {/* 이벤트 생성 컨테이너 */}
         <Route path="/EventCreate" element={<EventCreateContainer/>} />
@@ -57,6 +55,7 @@ const App = () => {
         <Route path="/my/profile" element={<My />} />
         <Route path="/unregister" element={<Unregister />} />
       </Routes>
+      
       {/* </Provider> */}
       {/* <Header /> */}
       <Footer/>

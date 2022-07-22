@@ -45,7 +45,6 @@ const Faq = () => {
   return (
     <div>
       <Navi navimenu={naviMenu} urlpage={urlPage} />
-
       {choosePage()}
     </div>
   );
