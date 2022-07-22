@@ -6,7 +6,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./Events.scss";
 import EventLike from "../EventInfo/EventLike";
-import Page from "../Page";
 
 
 const Events = () => {
