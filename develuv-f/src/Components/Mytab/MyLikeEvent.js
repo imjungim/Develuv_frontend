@@ -1,5 +1,6 @@
-import "./scss/Myevent.scss";
-import EventLike from "../EventInfo/EventLike";
+// import "./scss/Myevent.scss";
+
+import Events from "./Events";
 
 const MyLikeEvent = () => {
 
@@ -48,38 +49,12 @@ const MyLikeEvent = () => {
       description : "신청이 곧 마감되는 이벤트들입니다.",
     }
   ];
-
+  
 
   return (
-    <div id="event-board">
-    <div className="new-event">
-      <h3>좋아요 한 이벤트</h3>
-      <div>좋아요를 누른 이벤트입니다.</div>
+    <div>
+      <Events isSpecial={true} likeEvent={true}/>
     </div>
-
-    <div className="eventList-tabs">
-      {dummyList.map((it) => (
-        <div className="event-box">
-          <a href="/">
-            <div className="event-img">
-              <img src={process.env.PUBLIC_URL + "/user.jpg"} />
-            </div>
-            <div>
-              <div className="event-date">
-                {it.date} {it.type}
-              </div>
-              <div>{it.title}</div>
-            </div>
-          </a>
-
-          <div className="like-button">
-            {" "}
-            <EventLike />
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
   )
 }
 

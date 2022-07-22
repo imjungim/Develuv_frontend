@@ -2,7 +2,7 @@
 
 .Guide {
   max-width: 1060px;
-  height: 100%;
+  height: 100vh;
   margin: 0 auto;
   font-size: 0.8rem;
 }
@@ -14,10 +14,11 @@
 
 }
 .guide-content{
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .guide-content h3{
+  font-size: 16px;
   margin-bottom: 7px;
 }
 

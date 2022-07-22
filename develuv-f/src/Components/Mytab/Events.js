@@ -4,11 +4,11 @@ import axios from "axios";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "./Events.scss";
+
 import EventLike from "../EventInfo/EventLike";
 
 
-const Events = () => {
+const Events = ({isSpecial, likeEvent}) => {
   const dummyEventList= [
     {
       board_key: 1,
@@ -170,10 +170,10 @@ const Events = () => {
 
   return (
     <div>
-    <Container>
+    <Container  style={isSpecial ? {width : '1060px' ,paddingLeft : '0px'} : {width : '100%'} }>
       <div className="new-event">
-        <h3>이벤트 모두보기</h3>
-        <div>develuv의 이벤트를 한눈에 볼 수 있습니다.</div>
+      {likeEvent ? <h3>좋아요한 이벤트</h3> : <h3>이벤트 모두보기</h3>}
+      {likeEvent ? null : <div>develuv의 이벤트를 한눈에 볼 수 있습니다.</div>} 
       </div>
 
       <Row>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./scss/mainPage.scss";
 import { FullPage, Slide } from "react-full-page";
+import { Link } from "react-router-dom";
 import Footer from "../Components/Footer";
 
 const Mainpage = () => {
@@ -16,7 +17,9 @@ const Mainpage = () => {
                 <h1 id="introdText">D e v e l u p</h1>
                 <hr width="550px" />
                 <h2 id="introd2">개발 컨퍼런스부터 해커톤까지</h2>
+                <Link to="/login">
                 <button className="btn">시작하기</button>
+                </Link>
               </div>
             </div>
             <div className="halfWrap">
@@ -34,7 +37,11 @@ const Mainpage = () => {
                 <h1>개발 이벤트들은 모두 여기에서</h1>
                 <h1>한 번에 찾아보자!</h1>
                 <br></br>
+                
+                <Link to="/explore">
                 <a>더 알아보기</a>
+                </Link>
+ 
               </div>
             </div>
           </div>

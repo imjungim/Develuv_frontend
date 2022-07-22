@@ -34,7 +34,7 @@ const SearchKeyword = () => {
 
 
   return (
-    <div>
+    <div className="search-keyword">
     <EventSearch/>
     {searchData.length === 0 ?   
     <Notfound/>

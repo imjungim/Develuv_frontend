@@ -17,9 +17,6 @@ const Header = () => {
     goToEventCreate();
   }
 
-  
- // const [loginTitle, setLoginTitle] = useState('로그인')
-
   const [createEventURL,setcreateEventURL] = useState('/Explore')
 
   let location = useLocation();
@@ -63,7 +60,17 @@ const Header = () => {
             </li>
             <li>
               <Link to="/login/signup">
-                <a href="/">회원가입</a>
+                <a >회원가입</a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/faq">
+                <a href="/">FAQ</a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/my/events">
+                <a href="/">Myprofile</a>
               </Link>
             </li>
           </ul>
