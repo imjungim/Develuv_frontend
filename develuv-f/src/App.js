@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import "react-full-page";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Mainpage from "./Page/Mainpage";
 import Header from "./Components/Header";
 import Faq from "./Page/Faq";
@@ -10,7 +11,6 @@ import Login from "./Page/Login";
 import Explore from "./Page/Explore";
 import EventInfo from "./Containers/EventInfoContainer";
 import My from "./Page/My";
-import EventListAll from "./Page/EventListAll";
 import Unregister from "./Page/Unregister";
 import AttendeePage from "./Components/Attendee/Attendee";
 import EventCreateContainer from "./Containers/EventCreateContainer";
@@ -18,6 +18,8 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./Modules/index";
 import Signup from "./Page/Signup";
+import Events from "./Components/Explore/Events";
+import SearchKeyword from "./Page/SearchKeyword";
 
 const App = () => {
   return (
@@ -31,8 +33,12 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/login/signup" element={<Signup/>} />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/eventInfo/:id" element={<EventInfo />} />
-        <Route path="/explore/all" element={<EventListAll />} />
+        
+
+        <Route path="/events" element={<Events/>} /> 
+        <Route path="/events/:id" element={<EventInfo />} /> {/*이벤트 상세페이지 */}
+        <Route path="/search" element={<SearchKeyword/>} /> 이벤트 검색결과 페이지
+
 
         {/* 이벤트 생성 컨테이너 */}
         <Route path="/EventCreate" element={<EventCreateContainer/>} />

@@ -1,5 +1,5 @@
 import "../FaqTab/scss/Faqprivacy.scss";
-import Navi from "../Navi";
+
 
 const Privacy = () => {
   return (

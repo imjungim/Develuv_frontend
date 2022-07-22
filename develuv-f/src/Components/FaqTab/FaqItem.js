@@ -1,4 +1,4 @@
-import Navi from "../Navi";
+
 import "./scss/FaqItem.scss";
 
 

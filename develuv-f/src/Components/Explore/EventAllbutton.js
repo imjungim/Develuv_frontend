@@ -8,7 +8,7 @@ const EventAllbutton = () => {
 //   }
   return (
     <div className="eventAll">
-    <Link to="/EventAllpage">
+    <Link to="/events">
     <button>이벤트 모두보기</button>
     </Link>
   </div>

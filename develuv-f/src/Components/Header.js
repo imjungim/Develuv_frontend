@@ -2,7 +2,7 @@ import "../Components/scss/Header.scss";
 import React, { useState,useEffect } from "react";
 import 'react-router-dom';
 import { Link, Navigate, useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   //이벤트 둘러보기 클릭시 변경
@@ -18,14 +18,14 @@ const Header = () => {
   }
 
   
-  const [loginTitle, setLoginTitle] = useState('로그인')
+ // const [loginTitle, setLoginTitle] = useState('로그인')
 
   const [createEventURL,setcreateEventURL] = useState('/Explore')
 
   let location = useLocation();
 
   useEffect(() => {
-    if(location.pathname == "/Explore"){
+    if(location.pathname === "/Explore"){
       setEventTitle(false)
       setcreateEventURL('/EventCreate')
     }else{

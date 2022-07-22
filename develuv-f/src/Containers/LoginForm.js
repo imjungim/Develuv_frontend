@@ -1,6 +1,7 @@
+
 import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 import Modal from "../Components/Mytab/Modal";
 import "../Containers/scss/LoginForm.scss";
 
@@ -55,6 +56,22 @@ const LoginForm = (props) => {
   };
 
   if (isLoginPage) {
+    const loginSubmit = (e) => {
+      e.preventDefault();
+
+      axios
+        .post("login/post", {
+          email: email.email,
+          pw: pw.pw,
+        })
+        .then((res) => {
+          console.log('tt');
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+
     return (
       <div className="Login">
         <div>
@@ -66,19 +83,26 @@ const LoginForm = (props) => {
               />
               <h2> Develuv </h2>
             </div>
-            <form action="" method="GET" className="input-group">
+            <form
+              action=""
+              method="GET"
+              className="input-group"
+              onSubmit={loginSubmit}
+            >
               <div className="inputWrap">
                 <p>Email</p>
                 <input
                   type="email"
                   onChange={stateFunction.emailState}
                   placeholder="Your Email"
+                  name="email"
                 />
                 <p>Password</p>
                 <input
                   type="password"
                   onChange={stateFunction.pwState}
                   placeholder="password"
+                  name="pw"
                 />
               </div>
               <Link to="/login/signup">
@@ -86,7 +110,7 @@ const LoginForm = (props) => {
               </Link>
               <div className="flexCenter">
                 <button className="loginBtn" type="submit">
-                  Subscribe
+                  Login
                 </button>
                 <button className="loginBtn" type="submit" id="kakaoBtn">
                   KAKAO 로그인
@@ -100,54 +124,52 @@ const LoginForm = (props) => {
   }
 
   if (isSignUpPage) {
-
     const SignupSubmit = (e) => {
       e.preventDefault();
 
       let check = false;
 
-      if(email === '') {
-        alert('이메일이 빈 칸 입니다.');
+      if (email === "") {
+        alert("이메일이 빈 칸 입니다.");
         check = true;
       }
 
-      if(nickname === '') {
-        alert('이름이 빈 칸 입니다.');
+      if (nickname === "") {
+        alert("이름이 빈 칸 입니다.");
         check = true;
       }
 
-      if(pw === '') {
-        alert('비밀번호가 빈 칸 입니다.');
+      if (pw === "") {
+        alert("비밀번호가 빈 칸 입니다.");
         check = true;
       }
-      
-      if(pw.pw !== rePw.rePw) {
-        alert('비밀번호가 일치하지 않습니다.');
+
+      if (pw.pw !== rePw.rePw) {
+        alert("비밀번호가 일치하지 않습니다.");
         check = true;
       }
 
       console.log(pw.pw);
-      console.log(rePw.rePw)
+      console.log(rePw.rePw);
 
       if (check === false) {
-        axios.post('/login/signup/post', {
-          email: email,
-          pw: pw,
-          nickname: nickname
-        }).then((res) => {
-          <Link to="login"/>
-          console.log(res);
-          alert('회원가입 완료!');
-        }).catch((err) => {
-          console.log(err)
-        })
+        axios
+          .post("/login/signup/post", {
+            email: email,
+            pw: pw,
+            nickname: nickname,               
+          })
+          .then((res) => {
+            console.log(res);
+            alert("회원가입 완료!");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       } else {
-        return (
-        alert('회원가입에 실패하셨습니다.')
-        )
+        return alert("회원가입에 실패하셨습니다.");
       }
-
-    }
+    };
 
     return (
       <div className="Login">
@@ -160,7 +182,12 @@ const LoginForm = (props) => {
               />
               <h2> Develuv </h2>
             </div>
-            <form action="" method="GET" className="input-group" onSubmit={SignupSubmit}>
+            <form
+              action=""
+              method="GET"
+              className="input-group"
+              onSubmit={SignupSubmit}
+            >
               <div className="inputWrap">
                 <p>Email</p>
                 <input

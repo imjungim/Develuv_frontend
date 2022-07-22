@@ -1,27 +1,21 @@
-//import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "./EventItem.scss";
-import EventLike from "../EventInfo/EventLike";
 
-//import React, { useEffect, useState } from "react";
-//eventList props는 더미데이터입니다. eventData(Explore - props db)
-const EventItem = ({ eventList, eventmenu, eventdescript, dummyeventData }) => {
-  
-  //sliceData
-
-  const sliceData = dummyeventData.slice(0, 4);
-  console.log("sliceData : ", sliceData);
+const Searchboard = ({searchData}) => {
 
   return (
+
     <Container>
+  
       <div className="new-event">
-        <h3>{eventmenu}</h3>
-        <div>{eventdescript}</div>
+        <h3>이벤트 검색결과</h3>
+        <div>develuv이벤트 검색결과입니다.</div>
       </div>
+
       <Row>
-        {sliceData.map((it) => (
+        {searchData.map((it) => (
           <Col className="item" lg="3" md="6">
             <div className="eventList-tabs">
               <div className="event-box">
@@ -36,9 +30,9 @@ const EventItem = ({ eventList, eventmenu, eventdescript, dummyeventData }) => {
                         <div>{it.start_date} ~ </div>
                         <div>{it.end_date}</div>
                       </div>
-                      <div className="event-onoff">{it.onoff === 1 ? "온라인" : "오프라인"}</div>
+                      <div className="event-onoff">{it.onoff === 0 ? "온라인" : "오프라인"}</div>
                     </div>
-                    <EventLike/>
+
                   </div>
                 </a>
               </div>
@@ -46,8 +40,9 @@ const EventItem = ({ eventList, eventmenu, eventdescript, dummyeventData }) => {
           </Col>
         ))}
       </Row>
+      
     </Container>
   );
 };
 
-export default EventItem;
+export default Searchboard;

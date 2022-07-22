@@ -32,6 +32,8 @@
 
 .header_logo a{
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 700; 
   font-size: large;
   text-decoration: none;
@@ -49,11 +51,13 @@
 }
 .menus{
   width: 300px;
+
 }
 
 .menus ul{
   display: flex;
   justify-content: space-between;
+  margin: auto;
   list-style: none;
 }
 

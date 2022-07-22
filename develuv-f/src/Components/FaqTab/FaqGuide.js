@@ -1,6 +1,6 @@
 import "../FaqTab/scss/FaqGuide.scss";
 
-import Navi from "../Navi";
+
 
 const Guide = () => {
 

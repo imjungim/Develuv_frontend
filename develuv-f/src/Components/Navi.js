@@ -2,7 +2,7 @@ import "../Components/scss/Navi.scss";
 import { Link, useLocation } from "react-router-dom";
 import React, {useState, useEffect} from "react";
 
-const Navi = ({ navimenu,urlpage}) => {
+const Navi = ({ navimenu, urlpage}) => {
  console.log(urlpage)
   return (
     <div className="Navi">

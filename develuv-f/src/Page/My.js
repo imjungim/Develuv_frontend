@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import {useLocation } from "react-router-dom";
 import Navi from "../Components/Navi";
 import MyTicket from "../Components/Mytab/Myticket";
-import QrTicket from "../Components/Mytab/QrTicket";
+
 import MyeventItem from "../Components/Mytab/MyeventItem";
 import Profileform from "../Components/Mytab/Profileform";
-import EventItem from "../Components/Explore/EventItem";
+
 import Unregister from "./Unregister";
 import AttendeePage from "./AttendeePage";
 import MyLikeEvent from "../Components/Mytab/MyLikeEvent";
@@ -62,7 +62,7 @@ const My = () => {
       case "/unregister":
         return <Unregister />;
       default:
-        return <MyTicket />;
+        return <MyTicket />; //default
     }
   };
   //url 변경 props

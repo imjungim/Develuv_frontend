@@ -1,5 +1,5 @@
 import "./scss/FaqPolicy.scss";
-import Navi from "../Navi";
+
 
 const Policy = () => {
   return (
