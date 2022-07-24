@@ -51,13 +51,13 @@ const Explore = () => {
     return eventA < eventB ? 1 : -1;
   };
   const latestData = [...eventData];
-  console.log("latestData :", latestData);
+//  console.log("latestData :", latestData);
   const latestEvent = latestData.sort(getLatestevent);
-  console.log("latest : ", latestEvent);
+ // console.log("latest : ", latestEvent);
 
   //eventData 온라인인경우 filter
   const onlinefilter = eventData.filter(it=>it.onoff === 1);
- console.log("res : " , onlinefilter)
+ //console.log("res : " , onlinefilter)
 
   //eventData 마감임박인 경우 filter
   const getOldEvent = (a,b) => {
@@ -67,9 +67,9 @@ const Explore = () => {
   };
 
   const oldData = [...eventData];
-  console.log("oldData :", oldData);
+//  console.log("oldData :", oldData);
   const oldEvent = oldData.sort(getOldEvent);
-  console.log("oldEvent : ", oldEvent);
+ // console.log("oldEvent : ", oldEvent);
 
 
   return (

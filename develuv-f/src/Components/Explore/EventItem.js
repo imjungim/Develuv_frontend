@@ -8,12 +8,12 @@ import EventLike from "../EventInfo/EventLike";
 
 //import React, { useEffect, useState } from "react";
 //eventList props는 더미데이터입니다. eventData(Explore - props db)
-const EventItem = ({ eventList, eventmenu, eventdescript, eventData }) => {
+const EventItem = ({eventmenu, eventdescript, eventData }) => {
   
   //sliceData
 
   const sliceData = eventData.slice(0, 4);
-  console.log("sliceData : ", sliceData);
+  //console.log("sliceData : ", sliceData);
 
   return (
     <Container>
@@ -50,6 +50,12 @@ const EventItem = ({ eventList, eventmenu, eventdescript, eventData }) => {
     </Container>
   );
 };
+
+EventItem.defaultProps = {
+  eventData : [],
+  eventdescript : [],
+  eventmenu : [],
+}
 
 export default EventItem;
 

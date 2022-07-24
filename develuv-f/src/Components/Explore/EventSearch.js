@@ -42,7 +42,7 @@ const EventSearch = () => {
       type: "2",
     });
   };
-  console.log("state.text :", state.text);
+ // console.log("state.text :", state.text);
   return (
     <div className="search-tabs">
       <form
