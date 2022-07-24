@@ -1,19 +1,17 @@
 @import '../../App.scss';
 
 
-
 .header {
-  width: 100%;
+  max-width: 100%;
   height: 80px;
   position: sticky;
   top: 0;
   background-color: #f2f5f8;
 
-
 }
 
 .header_contents{
-  width: 1200px;
+  max-width: 1200px;
   height: 80px;
   display: flex;
   justify-content: space-between;

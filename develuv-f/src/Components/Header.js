@@ -3,10 +3,14 @@ import React, { useState,useEffect } from "react";
 import 'react-router-dom';
 import { Link, Navigate, useLocation } from "react-router-dom";
 //import { useNavigate } from "react-router-dom";
+// import {Cookies} from 'react-cookie'
 
 const Header = () => {
+  // const test = localStorage.getItem('connect.sid');
+  // console.log("test :", test)
   //이벤트 둘러보기 클릭시 변경
   const [eventTitle, setEventTitle] = useState(true);
+  
 
   const goToEventCreate = () => {
     Navigate('/EventCreate')

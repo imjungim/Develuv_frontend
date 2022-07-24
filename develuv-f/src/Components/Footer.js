@@ -4,48 +4,61 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-wrap">
-        <div className="footer-logo">
-          <ul>
-            <div className="logo">
+        <ul className="footer-logo">
+          <a href="/">
             <li>
               <img src={process.env.PUBLIC_URL + "/DeveluvLogo.png"} />
-              <h1>Develuv</h1>
             </li>
-            </div>
             <li>
-              <p>개발자를 위한 온 오프라인 이벤트 플랫폼</p>
+              <h2>Develuv</h2>
             </li>
-          </ul>
-        </div>
+          </a>
+        </ul>
 
-        <div>
-          <ul class="privacy-info">
+        <ul class="team-info">
+          <a href="https://github.com/imjungim">
             <li>
-              <a href="#">COMPANY</a>
+              <img src="GitHub-Mark-120px-plus.png" />
             </li>
             <li>
-              <a href="#">TERM & CONDITIONS</a>
+              <spa>홍정임</spa>
             </li>
             <li>
-              <a href="#">PRIVACY PRIVACY</a>
+              <span>github.com/imjungim</span>
             </li>
-          </ul>
-        </div>
-        <div>
-          <ul class="info">
-            <li>https://github.com/imjungim</li>
-            <li>https://github.com/cskdd1270</li>
-            <li>https://github.com/kimseonghyoek</li>
-          </ul>
-        </div>
-        <div>
-          <ul className="company-info">
-            <li>홍정임</li>
-            <li>최성현</li>
-            <li>김성혁</li>
-          </ul>
-        </div>
-        {/* @Copyright PROJECT TEAM DEVELUV All rights reserved */}
+          </a>
+        </ul>
+
+        <ul class="team-info">
+          <a href="https://github.com/cskdd1270">
+            <li>
+              <img src="GitHub-Mark-120px-plus.png" />
+            </li>
+            <li>
+              <span>최성현</span>
+            </li>
+            <li>
+              <span>github.com/cskdd1270</span>
+            </li>
+          </a>
+        </ul>
+
+        <ul class="team-info">
+          <a href="https://github.com/kimseonghyoek">
+            <li>
+              <img src="GitHub-Mark-120px-plus.png" />
+            </li>
+            <li>
+              <span>김성혁</span>
+            </li>
+            <li>
+              <span>github.com/kimseonghyoek</span>
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div className="copyright">
+        <span>@Copyright PROJECT DEVELUV All rights reserved</span>
       </div>
     </div>
   );

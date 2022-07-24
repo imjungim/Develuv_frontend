@@ -1,6 +1,6 @@
 // import "./scss/Myevent.scss";
 
-import Events from "./Events";
+import MyEvents from "./MyEvents";
 
 const MyLikeEvent = () => {
 
@@ -53,7 +53,7 @@ const MyLikeEvent = () => {
 
   return (
     <div>
-      <Events isSpecial={true} likeEvent={true}/>
+      <MyEvents isSpecial={true} likeEvent={true}/>
     </div>
   )
 }

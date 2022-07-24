@@ -1,16 +1,10 @@
 @import '../../../App.scss';
 
-.Guide {
-  max-width: 1060px;
-  height: 100vh;
-  margin: 0 auto;
-  font-size: 0.8rem;
-}
-
 .Guide-wrap{
   max-width: 1060px;
-  height: 100%;
+  max-height: 100%;
   margin: 0 auto;
+  font-size: 0.8rem;
 
 }
 .guide-content{
