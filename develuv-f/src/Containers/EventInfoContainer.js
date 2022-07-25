@@ -10,7 +10,7 @@ import axios from 'axios'
 const EventInfo = () => {
     const id = useParams().id
     const [post, setPost] = useState({image_id :"1.2"})
-    console.log(post)
+ 
 
     useEffect(()=>{
         axios.get(`http://localhost:80/event/${id}`)
@@ -27,6 +27,7 @@ const EventInfo = () => {
 
         }
     }
+
     const onCreate = async () => {
         try {
 
@@ -39,8 +40,8 @@ const EventInfo = () => {
     return (
         <div className="EventInfo">
             <EventInfoTitle post={post} />
-            {/* <EventInfoMain post={post} />
-            <EventComments onCreate={onCreate} /> */}
+            <EventInfoMain post={post} />
+            {/* <EventComments onCreate={onCreate} /> */}
         </div>
     )
 }
