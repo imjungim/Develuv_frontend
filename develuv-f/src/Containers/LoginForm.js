@@ -13,13 +13,7 @@ const LoginForm = (props) => {
   const [pw, setPw] = useState("");
   const [rePw, setRePw] = useState("");
 
-  // export const UserDispatch = React.createContext(user);
-  // const [modal, setModal] = useState(false);
 
-  // const modalState = {
-  //   openModal: setModal(true),
-  //   closeModal: setModal(false)
-  // }
 
   const stateFunction = {
     emailState: (e) => {
@@ -219,7 +213,7 @@ const LoginForm = (props) => {
                 />
               </div>
               <div className="flexCenter">
-                <button className="loginBtn" type="submit">
+                <button className="loginBtn" type="submit" >
                   Sign Up!
                 </button>
               </div>

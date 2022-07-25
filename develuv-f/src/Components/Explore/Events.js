@@ -47,7 +47,9 @@ const Events = () => {
               <div className="event-box">
                 <Link to={`/events/${it.board_key}`}>
                   <div className="event-img">
-                    <img src={process.env.PUBLIC_URL + "/user.jpg"} />
+                    <img src={`url(http://localhost:80/event1/${
+                        it.image_id.split(".")[0]
+                      }`}/>
                   </div>
                   <div>
                     <div className="event-descript">

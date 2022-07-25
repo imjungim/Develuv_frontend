@@ -6,10 +6,12 @@ import { Link, Navigate, useLocation } from "react-router-dom";
 // import {Cookies} from 'react-cookie'
 
 const Header = () => {
-  export const UserContext = createContext(null);
   //이벤트 둘러보기 클릭시 변경
   const [eventTitle, setEventTitle] = useState(true);
-  
+ 
+
+
+
   const goToEventCreate = () => {
     Navigate('/EventCreate')
   }

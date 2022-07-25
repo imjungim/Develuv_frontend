@@ -1,5 +1,5 @@
 //import axios from "axios";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -8,8 +8,7 @@ import EventLike from "../EventInfo/EventLike";
 
 //import React, { useEffect, useState } from "react";
 //eventList props는 더미데이터입니다. eventData(Explore - props db)
-const EventItem = ({eventmenu, eventdescript, eventData }) => {
-  
+const EventItem = ({ eventmenu, eventdescript, eventData }) => {
   //sliceData
 
   const sliceData = eventData.slice(0, 4);
@@ -28,7 +27,11 @@ const EventItem = ({eventmenu, eventdescript, eventData }) => {
               <div className="event-box">
                 <Link to={`/events/${it.board_key}`}>
                   <div className="event-img">
-                    <img src={process.env.PUBLIC_URL + "/user.jpg"} />
+                    <img
+                      src={`url(http://localhost:80/event1/${
+                        it.image_id.split(".")[0]
+                      }`}
+                    />
                   </div>
                   <div>
                     <div className="event-descript">
@@ -37,9 +40,11 @@ const EventItem = ({eventmenu, eventdescript, eventData }) => {
                         <div>{it.start_date} ~ </div>
                         <div>{it.end_date}</div>
                       </div>
-                      <div className="event-onoff">{it.onoff === 1 ? "온라인" : "오프라인"}</div>
+                      <div className="event-onoff">
+                        {it.onoff === 1 ? "온라인" : "오프라인"}
+                      </div>
                     </div>
-                    <EventLike/>
+                    <EventLike />
                   </div>
                 </Link>
               </div>
@@ -51,12 +56,10 @@ const EventItem = ({eventmenu, eventdescript, eventData }) => {
   );
 };
 
-
 EventItem.defaultProps = {
-  eventData : [],
-  eventdescript : [],
-  eventmenu : [],
-}
+  eventData: [],
+  eventdescript: [],
+  eventmenu: [],
+};
 
 export default EventItem;
-

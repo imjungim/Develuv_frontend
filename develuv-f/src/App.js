@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
 import "react-full-page";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Mainpage from "./Page/Mainpage";
 import Header from "./Components/Header";
 import Faq from "./Page/Faq";
@@ -19,6 +19,7 @@ import Events from "./Components/Explore/Events";
 import SearchKeyword from "./Page/SearchKeyword";
 
 const App = () => {
+
   return (
     <div className="App">
       <Header />
@@ -28,21 +29,20 @@ const App = () => {
         {/* url경로와 컴포넌트를 맵핑합니다. */}
         <Route path="/" element={<Mainpage />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/login/signup" element={<Signup/>} />
+        <Route path="/login/signup" element={<Signup />} />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/events" element={<Events/>} /> 
-        <Route path="/event/:id" element={<EventInfo />} /> {/*이벤트 상세페이지 */}
-        <Route path="/search" element={<SearchKeyword/>} /> 이벤트 검색결과 페이지
-    
+        <Route path="/events" element={<Events />} />
+        <Route path="/events/:id" element={<EventInfo />} />
+        {/*이벤트 상세페이지 */}
+        <Route path="/search" element={<SearchKeyword />} /> 이벤트 검색결과
+        페이지
         {/* 이벤트 생성 컨테이너 */}
-        <Route path="/EventCreate" element={<EventCreateContainer/>} />
-
+        <Route path="/EventCreate" element={<EventCreateContainer />} />
         {/* faq탭 */}
         <Route path="/faq" element={<Faq />} />
         <Route path="/code-of-conduct" element={<Faq />} />
         <Route path="/terms" element={<Faq />} />
         <Route path="/privacy" element={<Faq />} />
- 
         {/* myprofile탭 */}
         <Route path="/my/ticket" element={<My />} />
         <Route path="/my/events" element={<My />} />
@@ -51,10 +51,10 @@ const App = () => {
         <Route path="/my/profile" element={<My />} />
         <Route path="/unregister" element={<Unregister />} />
       </Routes>
-      
+
       {/* </Provider> */}
       {/* <Header /> */}
-      <Footer/>
+      <Footer />
     </div>
   );
 };
