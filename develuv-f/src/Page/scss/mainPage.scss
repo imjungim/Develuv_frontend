@@ -6,6 +6,10 @@
   margin-top: 100px;
 }
 
+#mainPage {
+  height: 100%;
+}
+
 #leftWrap h1 {
   color: $White;
 }
@@ -16,7 +20,7 @@
 }
 
 #mp_Photo {
-  margin-top: 20%;
+  margin-top: 10%;
   width: 60%;
   height: 60%;
 }
@@ -48,6 +52,7 @@
   width: 100%;
   height: 100%;
   background-image: url("data:image/svg+xml,%3Csvg id='visual' viewBox='0 0 1500 800' width='1500' height='800' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'%3E%3Crect x='0' y='0' width='1500' height='800' fill='%2347B5FF'%3E%3C/rect%3E%3Cg fill='%23d8e7f1'%3E%3Ccircle r='172' cx='1360' cy='188'%3E%3C/circle%3E%3Ccircle r='97' cx='74' cy='224'%3E%3C/circle%3E%3Ccircle r='168' cx='595' cy='605'%3E%3C/circle%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
 }
 
 #secondTitle {
