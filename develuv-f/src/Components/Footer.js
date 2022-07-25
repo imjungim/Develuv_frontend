@@ -58,7 +58,7 @@ const Footer = () => {
         </ul>
       </div>
       <div className="copyright">
-        <span>@Copyright PROJECT DEVELUV All rights reserved.</span>
+        <span>Copyright PROJECT DEVELUV All rights reserved.</span>
       </div>
     </div>
   );
