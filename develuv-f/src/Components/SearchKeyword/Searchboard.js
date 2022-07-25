@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -17,9 +18,11 @@ const Searchboard = ({searchData}) => {
           <Col className="item" lg="3" md="6">
             <div className="eventList-tabs">
               <div className="event-box">
-                <a href="/events/:id">
+                <Link to={`/events/${it.board_key}`}>
                   <div className="event-img">
-                    <img src={process.env.PUBLIC_URL + "/user.jpg"} />
+                    <img src={`url(http://localhost:80/event1/${
+                        it.image_id.split(".")[0]
+                      }`}/>
                   </div>
                   <div>
                     <div className="event-descript">
@@ -32,7 +35,7 @@ const Searchboard = ({searchData}) => {
                     </div>
 
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </Col>

@@ -2,18 +2,17 @@ import React from "react";
 import './EventCreateMain.scss'
 const EventCreateMain = ({ eventArticle, setEventArticle,onChange }) => {
 
-
     return (
         <div id="createMain">
             <div className="onoffTitle">
                 이벤트가 온라인 인가요, 오프라인 인가요?
             </div>
             <div className="onoffArea">
-                <button className={`onoffBox ${eventArticle.onoff && 'onoffClick'}`} onClick={() => { setEventArticle({ ...eventArticle, onoff: true }) }} >
+                <button className={`onoffBox ${eventArticle.onoff && 'onoffClick'}`} onClick={() => { setEventArticle({ ...eventArticle, onoff: 1 }) }} >
                     <div className="onlineImg"></div>
                     <div className="onoffText">온라인 이벤트</div>
                 </button>
-                <button className={`onoffBox ${!eventArticle.onoff && 'onoffClick'}`} onClick={() => { setEventArticle({ ...eventArticle, onoff: false }) }} >
+                <button className={`onoffBox ${!eventArticle.onoff && 'onoffClick'}`} onClick={() => { setEventArticle({ ...eventArticle, onoff: 0 }) }} >
                     <div className="offlineImg"></div>
                     <div className="onoffText">오프라인 이벤트</div>
                 </button>

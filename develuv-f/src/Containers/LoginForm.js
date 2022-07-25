@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import { useState } from "react";
 import { Link, Router } from "react-router-dom";
@@ -8,17 +7,13 @@ import "../Containers/scss/LoginForm.scss";
 const LoginForm = (props) => {
   const isLoginPage = props.isLoginPage;
   const isSignUpPage = props.isSignUpPage;
-
+  const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [nickname, setNickname] = useState("");
   const [pw, setPw] = useState("");
   const [rePw, setRePw] = useState("");
-  // const [modal, setModal] = useState(false);
 
-  // const modalState = {
-  //   openModal: setModal(true),
-  //   closeModal: setModal(false)
-  // }
+
 
   const stateFunction = {
     emailState: (e) => {
@@ -65,7 +60,11 @@ const LoginForm = (props) => {
           pw: pw.pw,
         })
         .then((res) => {
-          console.log('tt');
+          const { email, nickname } = res.data;
+          const user = { email, nickname };
+          setUser(user);
+          console.log(res);
+          console.log("tttt");
         })
         .catch((err) => {
           console.log(err);
@@ -157,7 +156,7 @@ const LoginForm = (props) => {
           .post("/login/signup/post", {
             email: email,
             pw: pw,
-            nickname: nickname,               
+            nickname: nickname,
           })
           .then((res) => {
             console.log(res);
@@ -214,7 +213,7 @@ const LoginForm = (props) => {
                 />
               </div>
               <div className="flexCenter">
-                <button className="loginBtn" type="submit">
+                <button className="loginBtn" type="submit" >
                   Sign Up!
                 </button>
               </div>

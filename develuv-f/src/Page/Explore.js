@@ -23,9 +23,9 @@ const Explore = () => {
     getData();
   }, []);
 
-  // useEffect(() => {
-  //   console.log("eventData : ", eventData);
-  // }, [eventData]);
+  useEffect(() => {
+    console.log("eventData : ", eventData);
+  }, [eventData]);
 
   const eventmenu = [
     {
@@ -56,8 +56,9 @@ const Explore = () => {
  // console.log("latest : ", latestEvent);
 
   //eventData 온라인인경우 filter
-  const onlinefilter = eventData.filter(it=>it.onoff === 1);
- //console.log("res : " , onlinefilter)
+  const onlineData = [...eventData]
+  const onlinefilter = onlineData.filter(it=>it.onoff === 1);
+  console.log("res : " , onlinefilter)
 
   //eventData 마감임박인 경우 filter
   const getOldEvent = (a,b) => {

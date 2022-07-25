@@ -1,24 +1,34 @@
 import "../Components/scss/Header.scss";
-import React, { useState,useEffect } from "react";
+import React, { createContext,useState,useEffect } from "react";
 import 'react-router-dom';
 import { Link, Navigate, useLocation } from "react-router-dom";
 //import { useNavigate } from "react-router-dom";
 // import {Cookies} from 'react-cookie'
 
 const Header = () => {
-  const test = localStorage.getItem('userinfo');
-  console.log("test :", test)
   //이벤트 둘러보기 클릭시 변경
   const [eventTitle, setEventTitle] = useState(true);
-  
+ 
+
+
+
   const goToEventCreate = () => {
     Navigate('/EventCreate')
   }
+
+  // user 객체를 props로 잘 받아와지는지 먼저 확인 하세요.
+  // useEffect(()=>{
+  //   if(user) {
+  //     // 헤더내용 프로필/로그아웃
+  //   } else {
+  //     // 헤더내용 로그인/회원가입
+  //   }
+  // },[user])
   
-  const eventTitleChange = () =>{
-    setEventTitle('이벤트 주최하기')
-    goToEventCreate();
-  }
+  // const eventTitleChange = () =>{
+  //   setEventTitle('이벤트 주최하기')
+  //   goToEventCreate();
+  // }
 
   const [createEventURL,setcreateEventURL] = useState('/Explore')
 
