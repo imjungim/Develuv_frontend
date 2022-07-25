@@ -19,16 +19,20 @@ import Events from "./Components/Explore/Events";
 import SearchKeyword from "./Page/SearchKeyword";
 
 const App = () => {
-
+  const [data, setData] = useState("");
+  console.log("data!! :",data);
+  const changedata = (user) => {
+    setData(user)
+  }
   return (
     <div className="App">
-      <Header />
+      <Header userData={data}/>
       {/* <Faq/> */}
       {/* <Provider store={store}> */}
       <Routes>
         {/* url경로와 컴포넌트를 맵핑합니다. */}
         <Route path="/" element={<Mainpage />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login getData={changedata}/>} />
         <Route path="/login/signup" element={<Signup />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/events" element={<Events />} />

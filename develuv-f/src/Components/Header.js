@@ -5,25 +5,28 @@ import { Link, Navigate, useLocation } from "react-router-dom";
 //import { useNavigate } from "react-router-dom";
 // import {Cookies} from 'react-cookie'
 
-const Header = () => {
+const Header = ({userData}) => {
   //이벤트 둘러보기 클릭시 변경
   const [eventTitle, setEventTitle] = useState(true);
- 
-
-
-
+  const [loginTitle, setLoginTitle] = useState("로그인");
+  const [signupChange, setSignupChange] = useState("회원가입")
+  console.log("userData :",userData)
   const goToEventCreate = () => {
     Navigate('/EventCreate')
   }
 
-  // user 객체를 props로 잘 받아와지는지 먼저 확인 하세요.
+  //user 객체를 props로 잘 받아와지는지 먼저 확인 하세요.
   // useEffect(()=>{
-  //   if(user) {
+  //   if(userData) {
   //     // 헤더내용 프로필/로그아웃
+  //      setLoginTitle("로그아웃")
+  //      setSignupChange("회원가입")
   //   } else {
   //     // 헤더내용 로그인/회원가입
+  //     setLoginTitle("로그인")
+  //     setSignupChange("프로필")
   //   }
-  // },[user])
+  // },[userData])
   
   // const eventTitleChange = () =>{
   //   setEventTitle('이벤트 주최하기')
@@ -68,12 +71,12 @@ const Header = () => {
             </li>
             <li>
               <Link to="/login">
-                <a>로그인</a>
+                <a>{loginTitle}</a>
               </Link>
             </li>
             <li>
               <Link to="/login/signup">
-                <a >회원가입</a>
+                <a >{signupChange}</a>
               </Link>
             </li>
             <li>

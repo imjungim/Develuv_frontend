@@ -31,7 +31,7 @@ const Searchboard = ({searchData}) => {
                         <div>{it.start_date} ~ </div>
                         <div>{it.end_date}</div>
                       </div>
-                      <div className="event-onoff">{it.onoff === 0 ? "온라인" : "오프라인"}</div>
+                      <div className="event-onoff">{it.onoff === 1 ? "온라인" : "오프라인"}</div>
                     </div>
 
                   </div>
