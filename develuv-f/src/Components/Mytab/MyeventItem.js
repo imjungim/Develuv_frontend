@@ -23,7 +23,7 @@ const MyeventItem = () => {
     },]
 
   return (
-    <Container style={ {width : '1060px', paddingLeft : '0px'}}>
+    <Container style={ {width : '1060px', height : '100%', paddingLeft : '0px'}}>
     <div className="new-event">
       <h3>주최한 이벤트</h3>
       <div>내가 주최한 이벤트 페이지 입니다.</div>

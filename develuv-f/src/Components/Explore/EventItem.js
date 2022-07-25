@@ -1,4 +1,5 @@
 //import axios from "axios";
+import { Link} from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -7,12 +8,12 @@ import EventLike from "../EventInfo/EventLike";
 
 //import React, { useEffect, useState } from "react";
 //eventList props는 더미데이터입니다. eventData(Explore - props db)
-const EventItem = ({ eventList, eventmenu, eventdescript, dummyeventData }) => {
+const EventItem = ({eventmenu, eventdescript, eventData }) => {
   
   //sliceData
 
-  const sliceData = dummyeventData.slice(0, 4);
-  console.log("sliceData : ", sliceData);
+  const sliceData = eventData.slice(0, 4);
+  //console.log("sliceData : ", sliceData);
 
   return (
     <Container>
@@ -25,7 +26,7 @@ const EventItem = ({ eventList, eventmenu, eventdescript, dummyeventData }) => {
           <Col className="item" lg="3" md="6">
             <div className="eventList-tabs">
               <div className="event-box">
-                <a href="/events/:id">
+                <Link to={`/events/${it.board_key}`}>
                   <div className="event-img">
                     <img src={process.env.PUBLIC_URL + "/user.jpg"} />
                   </div>
@@ -40,7 +41,7 @@ const EventItem = ({ eventList, eventmenu, eventdescript, dummyeventData }) => {
                     </div>
                     <EventLike/>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </Col>
@@ -50,4 +51,12 @@ const EventItem = ({ eventList, eventmenu, eventdescript, dummyeventData }) => {
   );
 };
 
+
+EventItem.defaultProps = {
+  eventData : [],
+  eventdescript : [],
+  eventmenu : [],
+}
+
 export default EventItem;
+

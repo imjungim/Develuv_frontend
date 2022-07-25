@@ -43,7 +43,7 @@ const Faq = () => {
   };
 
   return (
-    <div>
+    <div className="faq-container">
       <Navi navimenu={naviMenu} urlpage={urlPage} />
       {choosePage()}
     </div>

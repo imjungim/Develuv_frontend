@@ -18,7 +18,7 @@ const SearchKeyword = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8081/search?keyword=${keyword}&type=${type}`)
+      .get(`search?keyword=${keyword}&type=${type}`)
       .then((response) => {
         setSearchData(response.data);
       })

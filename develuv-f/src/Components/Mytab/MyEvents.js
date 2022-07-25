@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link} from "react-router-dom";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import "./Events.scss";
+
 import EventLike from "../EventInfo/EventLike";
 
 
-const Events = () => {
+const MyEvents = ({isSpecial, likeEvent}) => {
   // const dummyEventList= [
   //   {
   //     board_key: 1,
@@ -168,13 +168,12 @@ const Events = () => {
     console.log("eventDataAll : ", eventDataAll);
   }, [eventDataAll]);
 
-  console.log("eventData나와라 : ",eventDataAll)
   return (
     <div>
-    <Container>
+    <Container  style={isSpecial ? {width : '1060px' ,paddingLeft : '0px'} : {width : '100%'} }>
       <div className="new-event">
-        <h3>이벤트 모두보기</h3>
-        <div>develuv의 이벤트를 한눈에 볼 수 있습니다.</div>
+      {likeEvent ? <h3>좋아요한 이벤트</h3> : <h3>이벤트 모두보기</h3>}
+      {likeEvent ? null : <div>develuv의 이벤트를 한눈에 볼 수 있습니다.</div>} 
       </div>
 
       <Row>
@@ -182,7 +181,7 @@ const Events = () => {
           <Col className="item" lg="3" md="6">
             <div className="eventList-tabs">
               <div className="event-box">
-                <Link to={`/events/:${it.board_key}`}>
+                <a href="/events/:id">
                   <div className="event-img">
                     <img src={process.env.PUBLIC_URL + "/user.jpg"} />
                   </div>
@@ -197,7 +196,7 @@ const Events = () => {
                     </div>
                     <EventLike />
                   </div>
-                </Link>
+                </a>
               </div>
             </div>
           </Col>
@@ -213,4 +212,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default MyEvents;

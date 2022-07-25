@@ -3,9 +3,6 @@ import {Link} from "react-router-dom";
 
 const EventAllbutton = () => {
   
-//   const eventAll = () => {
-//     <Link to="/EventAllpage"></Link>
-//   }
   return (
     <div className="eventAll">
     <Link to="/events">
