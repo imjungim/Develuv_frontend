@@ -51,6 +51,7 @@ const EventItem = ({eventmenu, eventdescript, eventData }) => {
   );
 };
 
+
 EventItem.defaultProps = {
   eventData : [],
   eventdescript : [],

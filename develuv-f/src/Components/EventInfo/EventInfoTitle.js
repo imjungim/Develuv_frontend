@@ -1,16 +1,15 @@
 import React from "react";
-import { IoIosPeople } from 'react-icons/io'
 import './EventInfoTitle.scss'
 import EventLike from './EventLike'
-import img from './test.png'
-export default function EventInfoTitle({ post }) {
-    const { board_key, user_id, title, img, email, content, start_date, end_date,
-        ticket, onoff, address, club_status, type } = post
 
-    
+export default function EventInfoTitle({ post }) {
+    const { user_id, title, content, start_date, end_date,
+        ticket, onoff, address, club_status, type, image_id } = post
+        const imageArray = image_id.split('.')
+        console.log(imageArray)
     return (
         <div className="EventInfoTitle">
-            <div className="imgBox" style={{ backgroundImage: `url(${img})` }} />
+            <div className="imgBox" style={{ backgroundImage: `url(http://localhost:80/event1/${imageArray[0]}.png)`}}/>
             <div className="title">
                 <h1>{title}</h1>
                 {start_date}
@@ -25,7 +24,6 @@ export default function EventInfoTitle({ post }) {
                 </div>
                 <div>
                     {user_id}
-                    {email}
                 </div>
                 <div>
                     <EventLike />

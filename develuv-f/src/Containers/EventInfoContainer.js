@@ -4,37 +4,43 @@ import EventInfoTitle from '../Components/EventInfo/EventInfoTitle'
 import EventInfoMain from '../Components/EventInfo/EventInfoMain'
 import EventComments from '../Components/EventInfo/EventComment'
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { addComment } from '../Modules/Comment';
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
-const EventInfo = ()=> {
+const EventInfo = () => {
     const id = useParams().id
-    const infoData = {};
-    useEffect(() => {
-        axios.get(`http://localhost:8081/EventInfo/${id}`)
-            .then((response) => { 
-               setPost(response.data[0])
-            })
-            .catch((err) => { console.log(err) })
-    }, [])
-    const [post, setPost] = useState(
-        {
-            ...infoData
-        })
+    const [post, setPost] = useState({image_id :"1.2"})
+    console.log(post)
 
-        console.log(post)
-    const comments = useSelector(store => store.CommentReducer);
-    const dispatch = useDispatch();
-    const onCreate = text => dispatch(addComment(text));
+    useEffect(()=>{
+        axios.get(`http://localhost:80/event/${id}`)
+        .then((response) => {
+            setPost(response.data[0])
+        })
+        .catch((err) => { console.log(err) })
+    },[])
+
+    const onClick = async () => {
+        try {
+
+        } catch (err) {
+
+        }
+    }
+    const onCreate = async () => {
+        try {
+
+        } catch (err) {
+
+        }
+    };
 
 
     return (
         <div className="EventInfo">
             <EventInfoTitle post={post} />
-            <EventInfoMain post ={post}/>
-            <EventComments comments={comments} onCreate={onCreate} />
+            {/* <EventInfoMain post={post} />
+            <EventComments onCreate={onCreate} /> */}
         </div>
     )
 }
