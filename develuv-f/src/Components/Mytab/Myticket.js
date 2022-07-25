@@ -1,4 +1,3 @@
-import Navi from "../Navi";
 import Ticket from "./Ticket"
 import QrTicket from "./QrTicket"
 const Myticket = () => {

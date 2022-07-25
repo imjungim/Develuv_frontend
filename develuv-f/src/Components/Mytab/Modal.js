@@ -1,20 +1,8 @@
 import "./scss/Modal.scss";
-import { useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQrcode } from "@fortawesome/free-solid-svg-icons";
 
-// const Modal = (modal) => {
-
-//   return (
-//     <div className="modal">
-//       {modal ? 
-//         <div>
-//           <h1>모달</h1>
-//         </div>
-//        : null}
-//     </div>
-//   )
-// };
 
 const Modal = (props) => {
   // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
