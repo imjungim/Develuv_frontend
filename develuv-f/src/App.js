@@ -14,9 +14,6 @@ import My from "./Page/My";
 import Unregister from "./Page/Unregister";
 import AttendeePage from "./Components/Attendee/Attendee";
 import EventCreateContainer from "./Containers/EventCreateContainer";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-import rootReducer from "./Modules/index";
 import Signup from "./Page/Signup";
 import Events from "./Components/Explore/Events";
 import SearchKeyword from "./Page/SearchKeyword";
@@ -33,11 +30,10 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/login/signup" element={<Signup/>} />
         <Route path="/explore" element={<Explore />} />
-        
         <Route path="/events" element={<Events/>} /> 
-        <Route path="/events/:id" element={<EventInfo />} /> {/*이벤트 상세페이지 */}
+        <Route path="/event/:id" element={<EventInfo />} /> {/*이벤트 상세페이지 */}
         <Route path="/search" element={<SearchKeyword/>} /> 이벤트 검색결과 페이지
-
+    
         {/* 이벤트 생성 컨테이너 */}
         <Route path="/EventCreate" element={<EventCreateContainer/>} />
 

@@ -6,10 +6,11 @@ import "react-datepicker/dist/react-datepicker.css"
 import { ko } from 'date-fns/esm/locale'
 import { MdKeyboardArrowRight } from "react-icons/md";
 import setHours from "date-fns/setHours";
-import setMinutes from "date-fns/setMinutes" 
-const EventCreateContent = ({ eventArticle, onChange, setEventArticle, onClick, }) => {
+import setMinutes from "date-fns/setMinutes"
+import Iframe from 'react-iframe'
+const EventCreateContent = ({ eventArticle, onChange, setEventArticle, onClick , changeKRTime,imageRef}) => {
     const [imageSrc, setImageSrc] = useState('');
-    const [startDate, setStartDate] = useState(setHours(setMinutes(new Date().setDate(new Date().getDate()+1), 30), 9))
+    const [startDate, setStartDate] = useState(setHours(setMinutes(new Date().setDate(new Date().getDate() + 1), 30), 9))
     const [endDate, setEndDate] = useState(null)
 
     const encodeFileToBase64 = (fileBlob) => {
@@ -23,39 +24,27 @@ const EventCreateContent = ({ eventArticle, onChange, setEventArticle, onClick, 
         });
     }
 
-    const offset = new Date().getTimezoneOffset() * 60000; // 시간계산 변수
-    //값이바뀌면 실시간 저장
-
     useEffect(() => {
-        const startTime = Number(changeKRTime(startDate).replace(/\D/gi, ''))
-        const endTime = Number(changeKRTime(endDate).replace(/\D/gi, ''))
-        if (true) {
-            setEventArticle({
-                ...eventArticle,
-                start_date: changeKRTime(startDate),
-                end_date: changeKRTime(endDate)
-            })
-        } else {
-            alert('날짜가 잘못되었습니다')
-            setEndDate(null)
-        }
-    }, [endDate]);
-  
-    // 한국 시간으로 변환 , 보기좋게 변환
-    const changeKRTime = (date) => {
-        return new Date(date - offset).toISOString().replace("T", " ").replace(/\..*/, '');
-    }
+        setEventArticle({
+            ...eventArticle,
+            start_date: changeKRTime(startDate),
+            end_date: changeKRTime(endDate)
+        })
+
+    }, [startDate,endDate]);
+
+
     return (
         <div id="createContent" >
-            <form action='http://localhost:8081/EventCreate/upload' method="post" enctype="multipart/form-data" id="createForm">
+
+
+            <form target="iframe1" id="createForm">
                 <div id="eventTitle">
 
                     <div className="createTitle">이벤트 제목</div>
                     <input name="title" className="createInput" placeholder="이벤트 제목" value={eventArticle.title} onChange={onChange} />
 
                     <div className="createTitle">이벤트 기간</div>
-                    {/* <input name="end_date" className="createInput" placeholder="이벤트 기간" value={eventArticle.end_time} onChange={onChange} /> */}
-                    <div>이벤트 시작 시간</div>
                     <div className="dateBox">
                         <DatePicker
                             selected={startDate}
@@ -63,9 +52,9 @@ const EventCreateContent = ({ eventArticle, onChange, setEventArticle, onClick, 
                                 setEndDate(null)
                                 return setStartDate(date)
                             }}
-                            selectsStart 
+                            selectsStart
                             startDate={startDate}
-                            minDate={setHours(setMinutes(new Date().setDate(new Date().getDate()+1), 30), 9)}
+                            minDate={setHours(setMinutes(new Date().setDate(new Date().getDate() + 1), 30), 9)}
                             maxDate={new Date("2023-01-01T00:00:00")}
                             endDate={endDate}
                             locale={ko}
@@ -75,14 +64,14 @@ const EventCreateContent = ({ eventArticle, onChange, setEventArticle, onClick, 
                             showTimeSelect
                             timeIntervals={30}
                         />
-
-                        <MdKeyboardArrowRight size="40" width="40" height="40" overflow="visible" viewBox="0 -2 24 24" />
+                        
+                        <MdKeyboardArrowRight size="40" width="40" height="40" overflow="visible" viewBox="3 -2 24 24" />
                         <DatePicker
                             selected={endDate}
-                            onChange={date => setEndDate(date)}
-                            selectsEnd 
+                            onChange={(date) => setEndDate(date)}
+                            selectsEnd
                             startDate={startDate}
-                            endDate={endDate} 
+                            endDate={endDate}
                             minDate={startDate}
                             locale={ko}
                             placeholderText="종료 날짜"
@@ -101,6 +90,7 @@ const EventCreateContent = ({ eventArticle, onChange, setEventArticle, onClick, 
                             accept='image/*'
                             name="image"
                             onChange={(e) => { encodeFileToBase64(e.target.files[0]) }}
+                            ref={(el)=> (imageRef.current[0] = el)}
                         />
                     </div>
                 </div>
@@ -110,15 +100,15 @@ const EventCreateContent = ({ eventArticle, onChange, setEventArticle, onClick, 
                 <input
                     type="file"
                     accept='image/*'
-                    name="image" />
-
-
+                    name="image" 
+                    ref={(el)=> (imageRef.current[1] = el)}/>
                 <button className="reg" onClick={onClick} type="submit">이벤트 주최하기</button>
+                {/* <button onClick={()=>{console.log(changeKRTime(startDate))}} type="button">asd </button> */}
             </form>
-         
+        
+            <Iframe name="iframe1" style="display:none"/>
         </div>
     )
 }
 
 export default EventCreateContent
-
