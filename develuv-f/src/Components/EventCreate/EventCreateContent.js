@@ -23,7 +23,9 @@ const EventCreateContent = ({ eventArticle, onChange, setEventArticle, onClick ,
             };
         });
     }
-
+    function submmitFunction(event){
+        event.preventDefault();
+    }
     useEffect(() => {
         setEventArticle({
             ...eventArticle,
@@ -31,14 +33,14 @@ const EventCreateContent = ({ eventArticle, onChange, setEventArticle, onClick ,
             end_date: changeKRTime(endDate)
         })
 
-    }, [startDate,endDate]);
+    }, [endDate]);
 
 
     return (
         <div id="createContent" >
 
 
-            <form target="iframe1" id="createForm">
+            <form onSubmit={(event)=>{submmitFunction(event)}} id="createForm">
                 <div id="eventTitle">
 
                     <div className="createTitle">이벤트 제목</div>
@@ -106,7 +108,7 @@ const EventCreateContent = ({ eventArticle, onChange, setEventArticle, onClick ,
                 {/* <button onClick={()=>{console.log(changeKRTime(startDate))}} type="button">asd </button> */}
             </form>
         
-            <Iframe name="iframe1" style="display:none"/>
+       
         </div>
     )
 }
