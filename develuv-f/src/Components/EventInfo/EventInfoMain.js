@@ -3,10 +3,13 @@ import './EventInfoMain.scss'
 export default function EventInfoMain({ post }) {
     const { user_id, title, content, start_date, end_date,
         ticket, onoff, address, club_status, type, image_id } = post
+        const imageArray = image_id.split('.')
     return (
         <div className="eventMainPost">
             <div className="eventPost">
-                <div></div>
+                {/* <div style={{ backgroundImage: `url(http://localhost:80/event1/${imageArray[1]})` }}>
+                </div> */}
+                <img src ={`http://localhost:80/event1/${imageArray[1]}`} className="mainImg"/>
                 {content}
             </div>
         
