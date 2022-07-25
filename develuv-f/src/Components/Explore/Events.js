@@ -45,7 +45,7 @@ const Events = () => {
           <Col className="item" lg="3" md="6">
             <div className="eventList-tabs">
               <div className="event-box">
-                <Link to={`/events/${it.board_key}`}>
+                <Link to={`/event/${it.board_key}`}>
                   <div className="event-img" style={{backgroundImage: `url(http://localhost:80/event1/${it.image_id.split('.')[0]})`}}>
                   </div>
                   <div>

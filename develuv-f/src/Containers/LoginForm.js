@@ -12,7 +12,7 @@ const LoginForm = (props) => {
   const [nickname, setNickname] = useState("");
   const [pw, setPw] = useState("");
   const [rePw, setRePw] = useState("");
-
+  console.log("user!!! : ", user)
 
 
   const stateFunction = {
@@ -108,10 +108,10 @@ const LoginForm = (props) => {
                 <a>아직 회원이 아니신가요?</a>
               </Link>
               <div className="flexCenter">
-                <button className="loginBtn" type="submit">
+                <button className="loginBtn" type="submit" onClick={()=>{props.getData(user)}}>
                   Login
                 </button>
-                <button className="loginBtn" type="submit" id="kakaoBtn">
+                <button className="loginBtn" type="submit" id="kakaoBtn" >
                   KAKAO 로그인
                 </button>
               </div>

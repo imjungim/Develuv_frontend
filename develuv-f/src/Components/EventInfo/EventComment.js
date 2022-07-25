@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './EventComment.scss'
 import moment from 'moment';
 import 'moment/locale/ko'
@@ -9,8 +9,8 @@ const CommentList = React.memo(function CommentList({ comments }) {
   return (
     <ul className='ul'>
       {comments.map(comment => (
-        <li className='li' key={comment.id}><span className='nickname'>닉네임</span>
-          <span className='text'>{comment.text}</span>
+        <li className='li' key = {comment.id} ><span className='nickname'>닉네임</span>
+          <span className='text'>{comment.main}</span>
           <button className='deleteButton'>삭제</button>
           <span className='date'>{date}</span>
         </li>
@@ -19,12 +19,22 @@ const CommentList = React.memo(function CommentList({ comments }) {
   );
 });
 
-function EventComment({ comments, onCreate }) {
+function EventComment() {
   const [count, setCount] = useState(0)
   const [text, setText] = useState('');
+  const [comments, setComments] = useState([])
+  const nextId = useRef(0)
   const onChange = e => {
     setText(e.target.value)
     setCount(e.target.value.length)
+  };
+  const onCreate = (text) => {
+    const asd = {
+      id:nextId,
+      main: text,
+    }
+    nextId.current += 1
+    setComments([...comments, asd])
   };
   const onSubmit = e => {
     if (text) {
@@ -46,6 +56,7 @@ function EventComment({ comments, onCreate }) {
       let height = textarea.scrollHeight; // 높이
       textarea.style.height = `${height + 8}px`;
     }
+
 
   }
   return (
