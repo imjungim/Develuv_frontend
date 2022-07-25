@@ -10,7 +10,7 @@ const Header = ({userData}) => {
   const [eventTitle, setEventTitle] = useState(true);
   const [loginTitle, setLoginTitle] = useState("로그인");
   const [signupChange, setSignupChange] = useState("회원가입")
-  console.log("userData :",userData)
+  console.log("userData :",userData) //loginForm에서 부터 전달받은 user(id,nickname)값입니다. (LoginForm > Login > App -> Header)
   const goToEventCreate = () => {
     Navigate('/EventCreate')
   }
@@ -71,7 +71,7 @@ const Header = ({userData}) => {
             </li>
             <li>
               <Link to="/login">
-                <a>{loginTitle}</a>
+                <a onClick={()=>setLoginTitle("로그아웃")}>{loginTitle}</a>
               </Link>
             </li>
             <li>

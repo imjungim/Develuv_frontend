@@ -19,10 +19,7 @@ const Searchboard = ({searchData}) => {
             <div className="eventList-tabs">
               <div className="event-box">
                 <Link to={`/events/${it.board_key}`}>
-                  <div className="event-img">
-                    <img src={`url(http://localhost:80/event1/${
-                        it.image_id.split(".")[0]
-                      }`}/>
+                <div className="event-img" style={{backgroundImage: `url(http://localhost:80/event1/${it.image_id.split('.')[0]})`}}>
                   </div>
                   <div>
                     <div className="event-descript">
