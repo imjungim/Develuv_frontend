@@ -36,7 +36,7 @@ const App = () => {
         <Route path="/login/signup" element={<Signup />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/events/:id" element={<EventInfo />} />
+        <Route path="/event/:id" element={<EventInfo />} />
         {/*이벤트 상세페이지 */}
         <Route path="/search" element={<SearchKeyword />} /> 이벤트 검색결과
         페이지

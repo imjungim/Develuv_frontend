@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 
 const Mainpage = () => {
   return (
-    <div>
+    <div id="main">
       <FullPage>
         <Slide>
           <div id="slide1">
@@ -37,11 +37,9 @@ const Mainpage = () => {
                 <h1>개발 이벤트들은 모두 여기에서</h1>
                 <h1>한 번에 찾아보자!</h1>
                 <br></br>
-                
                 <Link to="/explore">
                 <a>더 알아보기</a>
                 </Link>
- 
               </div>
             </div>
           </div>

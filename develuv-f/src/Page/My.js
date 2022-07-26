@@ -44,7 +44,7 @@ const My = () => {
   //url에 따른 페이지 전환
   let location = useLocation();
   const [params, setParams] = useState(location.pathname);
-  console.log(params);
+  // console.log(params);
   useEffect(() => setParams(location.pathname), [location.pathname]);
 
   const choosePage = () => {
