@@ -1,0 +1,22 @@
+@import "../../App.scss";
+
+.card_body {
+  background-color: $MainColor2;
+  border-radius: 35px;
+  margin: 5% 0% 5% 0%;
+  width: 60%;
+  display: flex;
+}
+
+.card_body .Login {
+  height: auto;
+  justify-content: center;
+}
+
+.card_body .halfWrap {
+}
+
+#cardWrap {
+  display: flex;
+  justify-content: center;
+}
