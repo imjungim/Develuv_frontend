@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { Link, Router } from "react-router-dom";
+import { Link, Navigate, Router, useNavigate } from "react-router-dom";
 import Modal from "../Components/Mytab/Modal";
 import "../Containers/scss/LoginForm.scss";
 
@@ -12,8 +12,8 @@ const LoginForm = (props) => {
   const [nickname, setNickname] = useState("");
   const [pw, setPw] = useState("");
   const [rePw, setRePw] = useState("");
-  console.log("user!!! : ", user)
-
+  console.log("user!!! : ", user);
+  const history = useNavigate();
 
   const stateFunction = {
     emailState: (e) => {
@@ -41,15 +41,6 @@ const LoginForm = (props) => {
     },
   };
 
-  // element 변수
-  const Input = (props) => {
-    return <input type={props.type} placeholder={props.placeholder}></input>;
-  };
-
-  const Button = () => {
-    return <button>test</button>;
-  };
-
   if (isLoginPage) {
     const loginSubmit = (e) => {
       e.preventDefault();
@@ -63,11 +54,11 @@ const LoginForm = (props) => {
           const { email, nickname } = res.data;
           const user = { email, nickname };
           setUser(user);
-          console.log(res);
-          console.log("tttt");
+          history('/');
         })
         .catch((err) => {
           console.log(err);
+          alert('로그인에 실패하였습니다.');
         });
     };
 
@@ -108,10 +99,16 @@ const LoginForm = (props) => {
                 <a>아직 회원이 아니신가요?</a>
               </Link>
               <div className="flexCenter">
-                <button className="loginBtn" type="submit" onClick={()=>{props.getData(user)}}>
+                <button
+                  className="loginBtn"
+                  type="submit"
+                  onClick={() => {
+                    props.getData(user);
+                  }}
+                >
                   Login
                 </button>
-                <button className="loginBtn" type="submit" id="kakaoBtn" >
+                <button className="loginBtn" type="submit" id="kakaoBtn">
                   KAKAO 로그인
                 </button>
               </div>
@@ -160,11 +157,15 @@ const LoginForm = (props) => {
           })
           .then((res) => {
             console.log(res);
-            alert("회원가입 완료!");
+            console.log(props.history);
+            props.history.goBack();
           })
           .catch((err) => {
             console.log(err);
           });
+        return (
+          alert("정상적으로 회원가입이 완료되었습니다."), history(`/login`)
+        );
       } else {
         return alert("회원가입에 실패하셨습니다.");
       }
@@ -213,7 +214,7 @@ const LoginForm = (props) => {
                 />
               </div>
               <div className="flexCenter">
-                <button className="loginBtn" type="submit" >
+                <button className="loginBtn" type="submit">
                   Sign Up!
                 </button>
               </div>
