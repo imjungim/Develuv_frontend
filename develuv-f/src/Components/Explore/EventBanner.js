@@ -10,4 +10,3 @@ const EventBanner = () => {
 
 export default EventBanner;
 
-//        <img src={process.env.PUBLIC_URL + "/eventItem_banner.png"} />

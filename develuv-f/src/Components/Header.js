@@ -1,19 +1,21 @@
 import "../Components/scss/Header.scss";
-import React, { createContext,useState,useEffect } from "react";
-import 'react-router-dom';
+import React, { createContext, useState, useEffect } from "react";
+import "react-router-dom";
 import { Link, Navigate, useLocation } from "react-router-dom";
-//import { useNavigate } from "react-router-dom";
-// import {Cookies} from 'react-cookie'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-const Header = ({userData}) => {
+const Header = ({ userData }) => {
   //이벤트 둘러보기 클릭시 변경
   const [eventTitle, setEventTitle] = useState(true);
+  const [user, setUser] = useState(false);
   const [loginTitle, setLoginTitle] = useState("로그인");
-  const [signupChange, setSignupChange] = useState("회원가입")
-  console.log("userData :",userData) //loginForm에서 부터 전달받은 user(id,nickname)값입니다. (LoginForm > Login > App -> Header)
+  
+  let [width, setWidth] = useState(0);
+  console.log("userData :", userData); //loginForm에서 부터 전달받은 user(id,nickname)값입니다. (LoginForm > Login > App -> Header)
   const goToEventCreate = () => {
-    Navigate('/EventCreate')
-  }
+    Navigate("/EventCreate");
+  };
 
   //user 객체를 props로 잘 받아와지는지 먼저 확인 하세요.
   // useEffect(()=>{
@@ -27,32 +29,73 @@ const Header = ({userData}) => {
   //     setSignupChange("프로필")
   //   }
   // },[userData])
-  
+
   // const eventTitleChange = () =>{
   //   setEventTitle('이벤트 주최하기')
   //   goToEventCreate();
   // }
 
-  const [createEventURL,setcreateEventURL] = useState('/Explore')
+  const [createEventURL, setcreateEventURL] = useState("/Explore");
 
   let location = useLocation();
 
   useEffect(() => {
-    if(location.pathname === "/Explore"){
-      setEventTitle(false)
-      setcreateEventURL('/EventCreate')
-    }else{
-      setEventTitle(true)
-      setcreateEventURL('/Explore')
+    if (location.pathname === "/Explore") {
+      setEventTitle(false);
+      setcreateEventURL("/EventCreate");
+    } else {
+      setEventTitle(true);
+      setcreateEventURL("/Explore");
     }
-  }, [ location.pathname ])
+  }, [location.pathname]);
 
-  if (location.pathname === '/login') {
+  if (location.pathname === "/login") {
     return null;
   }
+
+  const login = () => {};
   return (
     <header className="header">
       <div className="header_contents">
+      <div className="side-menu" style={{width : width}}>
+        <button className="closebtn" onClick={() => setWidth(0)}>
+          &times;
+        </button>
+        <div className="side-menu-list" id="menu-list">
+        <ul>
+            <li>
+              <Link to={createEventURL}>
+                <a href="/">
+                  {eventTitle ? "이벤트 둘러보기" : "이벤트 주최하기"}
+                </a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/login">
+                <a onClick={() => setLoginTitle("로그아웃")}>{loginTitle}</a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/login/signup">
+                <a>회원가입</a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/faq">
+                <a href="/">FAQ</a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/my/ticket">
+                <a href="/">Myprofile</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+        <div className="burger-menu hide">
+          <FontAwesomeIcon icon={faBars} onClick={() => setWidth(200)} />
+        </div>
         <div className="header_logo">
           <Link to="/">
             <a href="/">
@@ -65,18 +108,20 @@ const Header = ({userData}) => {
         <div className="menus">
           <ul>
             <li>
-              <Link to = {createEventURL}>
-                <a href="/" >{eventTitle ? "이벤트 둘러보기" : "이벤트 주최하기"}</a>
+              <Link to={createEventURL}>
+                <a href="/">
+                  {eventTitle ? "이벤트 둘러보기" : "이벤트 주최하기"}
+                </a>
               </Link>
             </li>
             <li>
               <Link to="/login">
-                <a onClick={()=>setLoginTitle("로그아웃")}>{loginTitle}</a>
+                <a onClick={() => setLoginTitle("로그아웃")}>{loginTitle}</a>
               </Link>
             </li>
             <li>
               <Link to="/login/signup">
-                <a >{signupChange}</a>
+                <a>회원가입</a>
               </Link>
             </li>
             <li>
@@ -85,7 +130,7 @@ const Header = ({userData}) => {
               </Link>
             </li>
             <li>
-              <Link to="/my/events">
+              <Link to="/my/ticket">
                 <a href="/">Myprofile</a>
               </Link>
             </li>

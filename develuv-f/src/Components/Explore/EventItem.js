@@ -26,7 +26,14 @@ const EventItem = ({ eventmenu, eventdescript, eventData }) => {
             <div className="eventList-tabs">
               <div className="event-box">
                 <Link to={`/event/${it.board_key}`}>
-                  <div className="event-img" style={{backgroundImage: `url(http://localhost:80/event1/${it.image_id.split('.')[0]})`}}>
+                  <div
+                    className="event-img"
+                    style={{
+                      backgroundImage: `url(http://localhost:80/event1/${
+                        it.image_id.split(".")[0]
+                      })`,
+                    }}
+                  >
                     {/* <img
                       src={`url(http://localhost:80/event1/${
                         it.image_id.split(".")[0]
@@ -44,7 +51,6 @@ const EventItem = ({ eventmenu, eventdescript, eventData }) => {
                         {it.onoff === 1 ? "온라인" : "오프라인"}
                       </div>
                     </div>
-                    <EventLike />
                   </div>
                 </Link>
               </div>

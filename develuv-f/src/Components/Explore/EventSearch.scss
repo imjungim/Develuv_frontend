@@ -113,3 +113,9 @@
   box-shadow: none;
   border-color: #1fb6ff;
 }
+
+@media screen and (max-width : 63rem) {
+  .search-tabs{
+    display: none;
+  }  
+}

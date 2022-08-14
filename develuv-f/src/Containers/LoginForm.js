@@ -108,9 +108,11 @@ const LoginForm = (props) => {
                 <a>아직 회원이 아니신가요?</a>
               </Link>
               <div className="flexCenter">
+                <Link to ="/">
                 <button className="loginBtn" type="submit" onClick={()=>{props.getData(user)}}>
                   Login
                 </button>
+                </Link>
                 <button className="loginBtn" type="submit" id="kakaoBtn" >
                   KAKAO 로그인
                 </button>
