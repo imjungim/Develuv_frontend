@@ -6,22 +6,6 @@ import Col from "react-bootstrap/Col";
 
 const MyeventItem = () => {
 
-  const dummyList = [
-    {
-      id: 1,
-      image: "이미지영역",
-      date: "2022-07-08(금)",
-      type: "온라인",
-      title: "Node Js KOSTA",
-    },
-    {
-      id: 2,
-      image: "이미지영역",
-      date: "2022-07-09(토)",
-      type: "온라인",
-      title: "Node Js KOSTA",
-    },]
-
   return (
     <Container style={ {width : '1060px', height : '100%', paddingLeft : '0px'}}>
     <div className="new-event">
