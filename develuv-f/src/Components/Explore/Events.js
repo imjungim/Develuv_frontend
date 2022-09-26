@@ -31,7 +31,6 @@ const Events = () => {
     console.log("eventDataAll : ", eventDataAll);
   }, [eventDataAll]);
 
-  console.log("eventData나와라 : ",eventDataAll)
   return (
     <div>
     <Container>
@@ -66,9 +65,6 @@ const Events = () => {
         ))}
       </Row>
     </Container>
-    {/* <div className="pagination">
-    <Page />
-    </div> */}
     </div>
 
 
