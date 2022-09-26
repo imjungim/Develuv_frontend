@@ -4,13 +4,6 @@
 프론트엔드에 사용된 기술은 React 이며 추후 사용하는 라이브러리 등을 추가로 기재할 예정입니다.
 
 프론트엔드 개발 : @imjungim , @sunghyun, @Overloper
-
-최성현
-
-리덕스 redux@4.1.2 
-리액트 리덕스 react-redux
-리액트 아이콘 react-icons
-
     
 # 📌Develuv📌
 ![Develuv_3](https://user-images.githubusercontent.com/97380925/192245723-1fef68f4-a065-4cf5-9b81-07d628fe0856.gif)
@@ -25,7 +18,6 @@
 * 이벤트 주최부터 티켓팅, 참가자 관리까지  **간편한 관리 시스팀**
 
 🚨  주요 기능
-
 
 1. 이벤트 모임 등록 및 수정 삭제
     * 이벤트 모임 명, 모임 소개, 진행 기간, 참여 인원, 위치 정보를 작성해 등록할 수 있습니다.
