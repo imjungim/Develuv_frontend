@@ -66,9 +66,7 @@ const MyEvents = ({isSpecial, likeEvent}) => {
         ))}
       </Row>
     </Container>
-    {/* <div className="pagination">
-    <Page />
-    </div> */}
+
     </div>
 
 
