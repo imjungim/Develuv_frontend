@@ -6,13 +6,11 @@ import Col from "react-bootstrap/Col";
 import "./EventItem.scss";
 import EventLike from "../EventInfo/EventLike";
 
-//import React, { useEffect, useState } from "react";
-//eventList props는 더미데이터입니다. eventData(Explore - props db)
+
 const EventItem = ({ eventmenu, eventdescript, eventData }) => {
   //sliceData
 
   const sliceData = eventData.slice(0, 4);
-  //console.log("sliceData : ", sliceData);
 
   return (
     <Container>
@@ -27,11 +25,6 @@ const EventItem = ({ eventmenu, eventdescript, eventData }) => {
               <div className="event-box">
                 <Link to={`/event/${it.board_key}`}>
                   <div className="event-img" style={{backgroundImage: `url(http://localhost:80/event1/${it.image_id.split('.')[0]})`}}>
-                    {/* <img
-                      src={`url(http://localhost:80/event1/${
-                        it.image_id.split(".")[0]
-                      }`}
-                    /> */}
                   </div>
                   <div>
                     <div className="event-descript">
