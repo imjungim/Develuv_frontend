@@ -13,8 +13,8 @@
 
     
 # 📌Develuv📌
-![image](https://user-images.githubusercontent.com/51446128/176335021-19bee144-5aa7-49be-9152-5a6b6307c301.png)
-###### Develuv 로고입니다.
+![Develuv_3](https://user-images.githubusercontent.com/97380925/192245723-1fef68f4-a065-4cf5-9b81-07d628fe0856.gif)
+
 
 ## 프로젝트 소개
 
