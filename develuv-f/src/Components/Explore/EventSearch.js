@@ -9,7 +9,6 @@ const EventSearch = () => {
     text: "",
     type: "2",
   });
-  // console.log(state);
 
   const changeState = (e) => {
     setState({
@@ -42,7 +41,7 @@ const EventSearch = () => {
       type: "2",
     });
   };
- // console.log("state.text :", state.text);
+
   return (
     <div className="search-tabs">
       <form
