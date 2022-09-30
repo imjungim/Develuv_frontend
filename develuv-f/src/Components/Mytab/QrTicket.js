@@ -34,19 +34,18 @@ const QrTicket = (props) => {
             <Modal open={modalOpen} close={closeModal} header="이벤트 티켓 QR코드">
               <main> {props.children} </main>
               <div>
-                <div className="Qr-code">큐알코드자리</div>
-                <div className="Qr-content">
+                <div className="Qr-code">
+                <FontAwesomeIcon icon={faQrcode} className="active" />
+                </div>
+                <div className="Qr">
                   <h4>이벤트명</h4>
                   <p>이벤트타입 : 오프라인/온라인</p>
                   <p>ticket ID : 1234</p>
                   <p>구매자 : KIM</p>
                   <p>티켓가격 : 유/무료</p>
                   <p>티켓발행일 : 2022-07-12</p>
-                </div>
-                <div className="Qr-content">
                   <p>이벤트날짜 : 2022-07-12(화) 09:00~12:00</p>
-                  <br />
-                  <p>이벤트 장소 : 어딘가에서..</p>
+                  <p>이벤트 장소 : 서울시</p>
                 </div>
               </div>
             </Modal>
