@@ -1,7 +1,6 @@
 ﻿# Develuv_frontend
 
 이 저장소는 Develuv frontend 저장소 입니다. backend는 Develuv backend로 가시면 됩니다.
-프론트엔드에 사용된 기술은 React 이며 추후 사용하는 라이브러리 등을 추가로 기재할 예정입니다.
 
 프론트엔드 개발 : @imjungim , @sunghyun, @Overloper
     
