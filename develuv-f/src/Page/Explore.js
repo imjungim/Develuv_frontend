@@ -51,9 +51,8 @@ const Explore = () => {
     return eventA < eventB ? 1 : -1;
   };
   const latestData = [...eventData];
-//  console.log("latestData :", latestData);
   const latestEvent = latestData.sort(getLatestevent);
- // console.log("latest : ", latestEvent);
+
 
   //eventData 온라인인경우 filter
   const onlineData = [...eventData]
@@ -68,10 +67,7 @@ const Explore = () => {
   };
 
   const oldData = [...eventData];
-//  console.log("oldData :", oldData);
   const oldEvent = oldData.sort(getOldEvent);
- // console.log("oldEvent : ", oldEvent);
-
 
   return (
     <div style={{Width : '100%'}}>
