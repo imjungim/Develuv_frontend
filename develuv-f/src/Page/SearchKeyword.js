@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useSearchParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-//import "../Components/Explore/Events.scss";
 import Searchboard from "../Components/SearchKeyword/Searchboard"
 import EventSearch from "../Components/Explore/EventSearch";
 import Notfound from "../Components/SearchKeyword/Notfound";
