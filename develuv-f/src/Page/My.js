@@ -11,37 +11,7 @@ import AttendeePage from "./AttendeePage";
 import MyLikeEvent from "../Components/Mytab/MyLikeEvent";
 
 const My = () => {
-  const dummyList = [
-    {
-      id: 1,
-      image: "이미지영역",
-      date: "2022-07-08(금)",
-      type: "온라인",
-      title: "Node Js KOSTA",
-    },
-    {
-      id: 2,
-      image: "이미지영역",
-      date: "2022-07-09(토)",
-      type: "온라인",
-      title: "Node Js KOSTA",
-    },
-    {
-      id: 3,
-      image: "이미지영역",
-      date: "2022-07-10(일)",
-      type: "온라인",
-      title: "Node Js KOSTA",
-    },
-    {
-      id: 4,
-      image: "이미지영역",
-      date: "2022-07-11(월)",
-      type: "온라인",
-      title: "Node Js KOSTA",
-    },
-  ];
-  //url에 따른 페이지 전환
+  //url에 른 페이지 전환
   let location = useLocation();
   const [params, setParams] = useState(location.pathname);
   // console.log(params);
